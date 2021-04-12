@@ -1,0 +1,48 @@
+<ion-content>
+  <div class="profile-icon">
+    <ion-icon
+      class="pro-icon"
+      name="log-out-outline"
+      (click)="logout()"
+    ></ion-icon>
+  </div>
+  <br />
+  <br />
+  <div class="ion-padding">
+    <ion-calendar
+      [(ngModel)]="dateMulti"
+      [options]="optionsMulti"
+      [type]="type"
+      [format]="'YYYY-MM-DD'"
+    >
+    </ion-calendar>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="addTask()">
+    <ion-fab-button>
+      <ion-icon class="icon" name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-card>
+    <div class="container">
+      <div class="wrap">
+        <h3>Daily tasks</h3>
+      </div>
+    </div>
+
+    <div class="container" *ngFor="let item of task">
+      <br />
+      <br />
+      <div class="task-card">
+        <p class="type">{{item.type}}</p>
+
+        <div class="details">
+          <h3>{{item.taskName}}</h3>
+          <h3>
+            {{item.startTime | date: ' h:mm a'}} - {{item.endTime | date: ' h:mm
+            a'}}
+          </h3>
+        </div>
+      </div>
+    </div>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,109 @@
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <div class="wrap">
+      <h3>Add Task</h3>
+    </div>
+    <br />
+    <br />
+    <form (ngSubmit)="task(TaskData)" #TaskData="ngForm">
+      <div class="container">
+        <div class="Email">
+          <label>NAME</label>
+          <input
+            class="inp"
+            type="text"
+            name="name"
+            #name="ngModel"
+            ngModel
+            required
+          />
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="times">
+          <div class="time-from">
+            <ion-label>FROM</ion-label>
+
+            <ion-datetime
+              name="fromTime"
+              #fromTime="ngModel"
+              ngModel
+              required
+              displayFormat="h:mm a"
+              placeholder="09:00 AM"
+            ></ion-datetime>
+          </div>
+          <div class="time-to">
+            <ion-label>TO</ion-label>
+
+            <ion-datetime
+              name="toTime"
+              #toTime="ngModel"
+              ngModel
+              required
+              displayFormat="h:mm a"
+              placeholder="09:00 AM"
+            ></ion-datetime>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="labels">
+          <label>TYPE</label>
+          <label>PRIORITY</label>
+        </div>
+        <div class="types">
+          <div class="type">
+            <input
+              #type="ngModel"
+              ngModel
+              required
+              class="inp2"
+              type="text"
+              name="type"
+            />
+          </div>
+          <div class="priority">
+            <input
+              #priority="ngModel"
+              ngModel
+              required
+              class="inp2"
+              type="text"
+              name="priority"
+              placeholder="high/low"
+            />
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="description">
+          <textarea
+            #note="ngModel"
+            ngModel
+            required
+            name="note"
+            id=""
+            cols="30"
+            rows="10"
+          >
+        Notes
+        </textarea
+          >
+        </div>
+
+        <div class="buttons">
+          <ion-button type="submit" expand="block" shape="round"
+            >Create</ion-button
+          >
+        </div>
+        <br />
+      </div>
+    </form>
+    <ion-button class="cancel" expand="block" shape="round" (click)="home()"
+      >Cancel</ion-button
+    >
+    <br />
+  </ion-card>
+</ion-content>

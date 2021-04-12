@@ -1,0 +1,46 @@
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <div class="wrap">
+      <h3>Sign In for</h3>
+      <h3>work orginizer</h3>
+      <br />
+      <p>Have your busy life orginized in one place</p>
+    </div>
+    <br />
+    <br />
+    <div class="container">
+      <div class="Email">
+        <label>EMAIL</label>
+        <input
+          [(ngModel)]="email"
+          type="email"
+          name="email"
+          placeholder="kenny@gmail.com"
+        />
+      </div>
+      <br />
+      <br />
+      <br />
+
+      <div class="Password">
+        <label>PASSWORD</label>
+        <input [(ngModel)]="password" type="password" name="password" />
+      </div>
+      <ion-button expand="block" shape="round" (click)="login()"
+        >Sign In</ion-button
+      >
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <p>
+        Forgot password? No problem
+        <a (click)="forgot()">click here to reset</a>
+      </p>
+      <br />
+      <br />
+      <p>Don't have an account? <a (click)="register()">Sign Up now</a></p>
+    </div>
+  </ion-card>
+</ion-content>

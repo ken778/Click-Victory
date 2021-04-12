@@ -1,0 +1,56 @@
+ion-content {
+  --background: #5d4df1;
+}
+ion-calendar {
+  border-radius: 8px;
+  color: white;
+  --box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+}
+ion-fab-button {
+  border-radius: 8px;
+  color: white !important;
+}
+.icon {
+  z-index: 1;
+}
+.profile-icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-right: 15px;
+  margin-top: 7px;
+}
+.pro-icon {
+  font-size: 32px;
+}
+.wrap {
+  padding: 4%;
+}
+.container {
+  text-align: center;
+  align-items: center;
+
+  left: 0;
+  right: 0;
+  top: 70%;
+}
+.type {
+  padding: 3%;
+  width: 6rem;
+  background-color: rgb(221, 213, 213);
+  margin-left: 5px;
+  border-radius: 15px;
+  color: black;
+}
+.task-card {
+  width: 20rem;
+  margin: 0 auto;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 15rem;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+}
+.details {
+  margin-bottom: 10px;
+}

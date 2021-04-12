@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "taskscheduler-b8f9f": {
+      "hosting": {
+        "app": [
+          "taskscheduler-b8f9f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "taskscheduler-b8f9f"
+  }
+}
