@@ -21,4 +21,4 @@ export class SignUpPage implements OnInit {
   login() {
     this.router.navigate(['/sign-in']);
   }
-}
+} 

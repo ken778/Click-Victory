@@ -1,3 +1,5 @@
+import { AuthService } from 'src/app/services/auth.service';
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detailed.page.scss'],
 })
 export class DetailedPage implements OnInit {
-
-  constructor() { }
+  taskName:any;
+  task:any;
+  constructor(private _route : ActivatedRoute, private auth: AuthService) { }
 
   ngOnInit() {
+  
   }
+   
+
+      
+    
 
 }

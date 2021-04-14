@@ -1,0 +1,20 @@
+<ion-content >
+  <h1>PROFILE</h1>
+  <ion-card *ngIf='details'> 
+   Email: {{details.email}}
+  </ion-card>
+  <div class="continue-with-Goole" (click)="logout()">
+    <div class="icon">
+     
+    <div class="words">Logout</div>
+    <div class="ico">
+      <ion-icon
+      size="large"
+      class="pro-icon"
+      name="log-out-outline"
+      
+    ></ion-icon>
+  </div>
+  </div>
+  </div>
+</ion-content>

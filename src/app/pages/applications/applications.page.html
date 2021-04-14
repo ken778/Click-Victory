@@ -1,0 +1,19 @@
+
+
+<ion-content >
+<ion-card class="main">
+ Applied Jobs
+</ion-card>
+<ion-fab vertical="bottom" (click)="toForm()" horizontal="end" slot="fixed" (click)="addTask()">
+  <ion-fab-button>
+    <ion-icon class="icon" name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-card *ngFor="let item of application">
+  <h2>{{item.companyName}} </h2>
+  <p>{{item.jobTitle}} </p>
+ 
+  <p>{{item.timeCreated | date: 'MMM d, y, h:mm:ss a' }} </p>
+</ion-card>
+</ion-content>

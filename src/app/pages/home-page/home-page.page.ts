@@ -19,7 +19,7 @@ export class HomePagePage implements OnInit {
     private router: Router,
     public _route: ActivatedRoute,
     private _data: AuthService,
-    private afs: AngularFirestore
+    private afs: AngularFirestore 
   ) {}
 
   ngOnInit() {

@@ -63,7 +63,7 @@ export class AddTaskPagePage implements OnInit {
         .add(taskData)
         .then(() => {
           this.toast('task added', 'success');
-          this.router.navigate(['/home-page']);
+          this.router.navigate(['/home']);
         })
         .catch((err) => {
           this.toast('something is wrong', 'danger');
@@ -82,6 +82,6 @@ export class AddTaskPagePage implements OnInit {
     toast.present();
   } //end of toast
   home() {
-    this.router.navigate(['/home-page']);
+    this.router.navigate(['/home']);
   }
 }

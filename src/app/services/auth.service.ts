@@ -58,7 +58,7 @@ export class AuthService {
     this.afauth
       .signInWithPopup(provider)
       .then(() => {
-        this.router.navigate(['/home-page']);
+        this.router.navigate(['/home']);
       })
       .catch((err) => {
         console.log('err', err.message);
@@ -68,11 +68,15 @@ export class AuthService {
   //logout
   logout() {
     this.afauth.signOut().then(() => {
-      this.router.navigate(['/sign-in']);
+      this.router.navigate(['/sign-up']);
     });
   }
   //get users
   GetUsers() {
     return this.afs.collection('users');
   }
+  getJobInfo(ref) {
+    return this.afs.collection('tasks').doc(ref).valueChanges();
+  }
+  
 }

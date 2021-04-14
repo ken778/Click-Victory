@@ -45,7 +45,7 @@ export class SignInPage implements OnInit {
       this.auth
         .login(this.email, this.password)
         .then(() => {
-          this.router.navigate(['/home-page']);
+          this.router.navigate(['/home']);
           loading.dismiss();
         })
         .catch((error) => {

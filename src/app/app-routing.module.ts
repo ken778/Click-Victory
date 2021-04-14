@@ -71,6 +71,23 @@ const routes: Routes = [
         (m) => m.DetailedPageModule
       ),
   },
+  {
+    path: 'tasks',
+    loadChildren: () => import('./pages/tasks/tasks.module').then( m => m.TasksPageModule)
+  },
+  {
+    path: 'applications',
+    loadChildren: () => import('./pages/applications/applications.module').then( m => m.ApplicationsPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'form',
+    loadChildren: () => import('./pages/form/form.module').then( m => m.FormPageModule)
+  },
+
 ];
 
 @NgModule({

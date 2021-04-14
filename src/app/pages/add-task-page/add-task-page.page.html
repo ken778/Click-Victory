@@ -8,7 +8,7 @@
     <form (ngSubmit)="task(TaskData)" #TaskData="ngForm">
       <div class="container">
         <div class="Email">
-          <label>NAME</label>
+          <label class="title">TASK TITLE</label>
           <input
             class="inp"
             type="text"
@@ -50,8 +50,8 @@
         <br />
         <br />
         <div class="labels">
-          <label>TYPE</label>
-          <label>PRIORITY</label>
+          <label class="label1">TYPE</label>
+          <label class="label2">PRIORITY</label>
         </div>
         <div class="types">
           <div class="type">
@@ -62,6 +62,7 @@
               class="inp2"
               type="text"
               name="type"
+              placeholder="meeting"
             />
           </div>
           <div class="priority">
@@ -87,8 +88,9 @@
             id=""
             cols="30"
             rows="10"
+            placeholder="Notes"
           >
-        Notes
+       
         </textarea
           >
         </div>

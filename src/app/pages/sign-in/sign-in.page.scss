@@ -8,7 +8,7 @@ ion-content {
 
   left: 0;
   right: 0;
-  top: 70%;
+  top: 60%;
 }
 .wrap {
   padding: 4%;
@@ -32,4 +32,7 @@ ion-button {
 
 label {
   margin-top: -6px !important;
+}
+ion-card {
+  height: 32rem;
 }
