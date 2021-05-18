@@ -27,12 +27,6 @@ ion-fab-button {
   padding: 4%;
 }
 .container {
-  text-align: center;
-  align-items: center;
-
-  left: 0;
-  right: 0;
-  top: 70%;
 }
 .type {
   padding: 3%;
@@ -44,13 +38,45 @@ ion-fab-button {
 }
 .task-card {
   width: 20rem;
-  margin: 0 auto;
+
   border: 1px solid black;
   margin-bottom: 10px;
   border-radius: 10px;
   width: 15rem;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+  margin-right: 6px;
 }
 .details {
   margin-bottom: 10px;
+}
+ion-slide {
+  margin-right: 1rem;
+}
+ion-slides {
+  background: #5d4df1;
+  padding: 2rem;
+  height: 180px;
+  margin-bottom: 2rem;
+}
+.display {
+  width: 27rem !important;
+
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.849);
+  border-radius: 10px;
+  background: white;
+}
+.toper {
+  text-align: center;
+}
+.timeDate {
+}
+.taskName {
+  font-weight: bolder;
+}
+.dipl2 {
+  text-align: center;
+}
+.icons {
+  display: flex;
+  justify-content: space-around;
 }

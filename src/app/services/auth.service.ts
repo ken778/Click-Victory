@@ -78,5 +78,18 @@ export class AuthService {
   getJobInfo(ref) {
     return this.afs.collection('tasks').doc(ref).valueChanges();
   }
-  
+  postponeTask(ref, record) {
+    return this.afs
+      .collection('tasks')
+      .doc(ref)
+      .update(record)
+      .then((results) => {
+        this.toast('Details updated','success')
+        this.router.navigate(['/home'])
+      })
+      .catch((err) => {
+        console.log('error occured, ', err);
+      });
+  }
+ 
 }

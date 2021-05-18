@@ -11,6 +11,7 @@ import { Route } from '@angular/compiler/src/core';
 })
 export class ApplicationsPage implements OnInit {
 
+  total = 0;
   application:any;
   constructor(private router:Router,
     public _route: ActivatedRoute,
@@ -27,6 +28,8 @@ export class ApplicationsPage implements OnInit {
         .subscribe((dat) => {
           console.log(dat);
           this.application = dat;
+          console.log(dat.length)
+          this.total = dat.length;
         });
     });
   }

@@ -87,6 +87,19 @@ const routes: Routes = [
     path: 'form',
     loadChildren: () => import('./pages/form/form.module').then( m => m.FormPageModule)
   },
+  {
+    path: 'openpop',
+    loadChildren: () => import('./pages/openpop/openpop.module').then( m => m.OpenpopPageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'postpone/:ref',
+    loadChildren: () => import('./pages/postpone/postpone.module').then( m => m.PostponePageModule)
+  },
+
 
 ];
 

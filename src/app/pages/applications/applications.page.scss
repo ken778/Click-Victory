@@ -8,6 +8,14 @@ ion-content {
 }
 ion-card {
   text-align: center;
-  
+
   --box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+}
+.tot {
+  width: 100px;
+  padding: 1px;
+  background-color: rgb(247, 247, 134);
+  margin-left: 1rem;
+  text-align: center;
+  border-radius: 10px;
 }
