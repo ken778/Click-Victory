@@ -68,7 +68,7 @@ export class AuthService {
   //logout
   logout() {
     this.afauth.signOut().then(() => {
-      this.router.navigate(['/sign-up']);
+      this.router.navigate(['/sign']);
     });
   }
   //get users

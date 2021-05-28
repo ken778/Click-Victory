@@ -1,5 +1,49 @@
 ion-content {
-  --background: #5d4df1;
+  --background: var(--ion-color-light);
+  .title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: var(--ion-color-dark);
+  }
+  ion-slides {
+      ion-card {
+          height: 30vh;
+          width: 100%;
+          border-radius: 10px;
+          ion-card-header {
+              ion-label, p {
+                  font-weight: bold;
+                  font-size: 1rem;
+                  color: var(--ion-color-dark);
+              }
+          }
+          ion-card-content {
+              img {
+                  height: 20vh;
+              }
+          }
+      }
+      .bgCard {
+          //background-image: url('../../../../assets/imgs/bg.png');
+          background-position: fixed;
+          background-repeat: no-repeat;
+          background-size: contain;
+      }
+      .featured {
+          height: 30vh;
+          ion-card-header {
+              padding: 0;
+              background: var(--ion-color-tertiary);
+              img {
+                  height: 30vh;
+              }
+          }
+      }
+      .price {
+          align-self: end;
+          margin-top: 11px;
+      }
+  }
 }
 ion-calendar {
   border-radius: 8px;
@@ -10,73 +54,38 @@ ion-fab-button {
   border-radius: 8px;
   color: white !important;
 }
-.icon {
-  z-index: 1;
+ion-header {
+  background: var(--ion-color-light);
+  ion-list {
+      background: var(--ion-color-primary);
+      border-radius: 0 0 20px 20px;
+      padding-bottom: 7vh;
+      ion-item {
+          ion-label {
+              font-weight: bold;
+              font-size: 1.2rem;
+              letter-spacing: 0.5px;
+          }
+          ion-avatar {
+              background: white;
+          }
+      }
+  }
+  .popover {
+      margin: 0 8px;
+      ion-searchbar {
+          --border-radius: 20px;
+          margin-top: -30px;
+      }
+  }
 }
-.profile-icon {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  margin-right: 15px;
-  margin-top: 7px;
+.type{
+  padding: 1rem;
+  border-radius: 50%;
+  background: rgb(80, 162, 216);
 }
-.pro-icon {
-  font-size: 32px;
-}
-.wrap {
-  padding: 4%;
-}
-.container {
-}
-.type {
-  padding: 3%;
-  width: 6rem;
-  background-color: rgb(221, 213, 213);
-  margin-left: 5px;
-  border-radius: 15px;
-  color: black;
-}
-.task-card {
-  width: 20rem;
-
-  border: 1px solid black;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  width: 15rem;
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
-  margin-right: 6px;
-}
-.details {
-  margin-bottom: 10px;
-}
-ion-slide {
-  margin-right: 1rem;
-}
-ion-slides {
-  background: #5d4df1;
-  padding: 2rem;
-  height: 180px;
-  margin-bottom: 2rem;
-}
-.display {
-  width: 27rem !important;
-
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.849);
-  border-radius: 10px;
-  background: white;
-}
-.toper {
-  text-align: center;
-}
-.timeDate {
-}
-.taskName {
-  font-weight: bolder;
-}
-.dipl2 {
-  text-align: center;
-}
-.icons {
-  display: flex;
-  justify-content: space-around;
+.del{
+  --background:rgb(224, 84, 84); 
+  --background-activated:rgb(224, 84, 84); 
+ 
 }

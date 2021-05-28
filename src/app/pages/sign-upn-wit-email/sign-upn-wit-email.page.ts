@@ -84,4 +84,8 @@ export class SignUpnWitEmailPage implements OnInit {
   login() {
     this.router.navigate(['/sign-in']);
   }
+
+  toSign(){
+    this.router.navigate(['/sign'])
+  }
 }

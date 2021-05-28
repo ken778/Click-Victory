@@ -1,11 +1,25 @@
-<ion-header>
+<!--<ion-header>
   <ion-toolbar>
     <ion-title></ion-title>
     <div class="profile-icon">
       <ion-icon size="large" (click)="presentPopover($ev)" name="ellipsis-horizontal-sharp"></ion-icon>
     </div>
   </ion-toolbar>
+</ion-header>-->
+
+<ion-header class="ion-no-border" *ngIf="details">
+  <ion-list lines="none">
+    <ion-item color="primary">
+      <ion-icon slot="start" name=""></ion-icon>
+    </ion-item>
+    <ion-item color="primary">
+      <ion-label>Hi {{details.email}}</ion-label>
+     
+    </ion-item>
+  </ion-list>
+ 
 </ion-header>
+
 <ion-content>
  
   <br />
@@ -24,40 +38,49 @@
       <ion-icon class="icon" name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-  <div class="toper">
-    <h2 class="top">Daily Tasks</h2>
-  </div>
-    <ion-slides  [options]="{slidesPerView: 'auto', zoom: false, grabCursor: true }">
-         
-    
-
-      
-      <ion-slide *ngFor="let item of task">
-        
-        <div class="display">
-          <p class="type">{{item.type}}</p>
-          <h3 class="taskName">{{item.taskName}}</h3>
-          <h4 class="timeDate">
-            {{item.startTime | date: ' h:mm a'}} - {{item.endTime | date: ' h:mm
-            a'}}
-          </h4>
-          <div class="icons">
-            <ion-buttton [routerLink]="['/', 'postpone', item.id]"
-            routerLinkActive="router-link-active">
-              <ion-icon  name="pencil-sharp"></ion-icon>
-            </ion-buttton>
-            <ion-buttton>
-              <ion-icon (click)="delete(item.id)" name="trash-sharp"></ion-icon>
-            </ion-buttton>
+ 
+  <ion-grid class="ion-margin-top">
+    <ion-item lines="none" color="light">
+      <ion-label class="title">Daily Tasks</ion-label>
+     
+    </ion-item>
+    <ion-row>
+      <ion-slides [options]="slideOpts1">
+        <ion-slide *ngFor="let item of task">
+          <ion-card class="featured">
+            <ion-card-header>
+                     
+            </ion-card-header>
+            <ion-card-content>
+              <ion-item lines="none">
+                <ion-label>
+                  
+                  <ion-text class="type">{{item.type}}</ion-text>
+                </ion-label>
+                
+              </ion-item>
+              <h1 class="taskName">{{item.taskName}}</h1>
+              <h4 class="timeDate">
+                {{item.startTime | date: ' h:mm a'}} - {{item.endTime | date: ' h:mm
+                a'}}
+              </h4>
+              <ion-button (click)="delete(item.id)" class="del">
+                <ion-icon  class="trash"  size="large"  name="trash-sharp"></ion-icon>
+              </ion-button>
+            </ion-card-content>
+            <ion-text class="price" slot="end" color="primary"><b></b></ion-text>
             
-          </div>
-       
-        </div>
-        
-      </ion-slide>
-   
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+  </ion-grid> 
+
+
+
     
-    </ion-slides>
  
   
 </ion-content>
+
+

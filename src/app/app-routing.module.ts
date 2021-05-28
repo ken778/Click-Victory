@@ -98,7 +98,19 @@ const routes: Routes = [
   {
     path: 'postpone/:ref',
     loadChildren: () => import('./pages/postpone/postpone.module').then( m => m.PostponePageModule)
+  },  {
+    path: 'sign',
+    loadChildren: () => import('./pages/sign/sign.module').then( m => m.SignPageModule)
   },
+  {
+    path: 'login-with-username',
+    loadChildren: () => import('./pages/login-with-username/login-with-username.module').then( m => m.LoginWithUsernamePageModule)
+  },
+  {
+    path: 'user-login',
+    loadChildren: () => import('./pages/user-login/user-login.module').then( m => m.UserLoginPageModule)
+  },
+
 
 
 ];

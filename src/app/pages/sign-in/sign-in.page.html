@@ -1,4 +1,4 @@
-<ion-content [fullscreen]="true">
+<!--<ion-content [fullscreen]="true">
   <ion-card>
     <div class="wrap">
       <h3>Sign In for</h3>
@@ -37,4 +37,44 @@
       <p>Don't have an account? <a (click)="register()">Sign Up now</a></p>
     </div>
   </ion-card>
+</ion-content>-->
+<ion-header class="ion-no-border">
+  <ion-list lines="none">
+    
+   
+  </ion-list>
+
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-fab vertical="top" edge horizontal="center" slot="fixed">
+    <ion-fab-button (click)="  toSign()" class="fab" routerLink="/login">
+      <ion-icon name="close-outline" color="white"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+ 
+    <div class="content">
+      <ion-list lines="none" class="ion-margin">
+        <ion-list-header>WELCOME </ion-list-header>
+        <ion-item class="ion-margin">
+          <ion-input type="email"
+          [(ngModel)]="email"
+          name="email" placeholder="Enter Username" type="text" clearInput="true"></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin">
+          <ion-input [(ngModel)]="password"  name="password" placeholder="Enter Password" type="password" clearInput="true"></ion-input>
+        </ion-item>
+        <ion-text color="medium"><p (click)="forgot()" class="ion-margin-horizontal">Forgot Password?</p></ion-text>
+        <div align="right">
+          <ion-button  (click)="login()"  shape="round" strong="true" class="ion-margin-end" color="primary">
+            SIGN IN
+            <ion-icon name="log-in"  slot="end"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-list>
+    </div>
+ 
+  
+ 
 </ion-content>

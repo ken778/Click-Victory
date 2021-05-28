@@ -1,38 +1,60 @@
-ion-content {
-  --background: url("../../../assets/backgroundImage/purple2.png ") no-repeat
-    center/cover fixed;
-}
-.container {
-  text-align: center;
-  align-items: center;
 
-  left: 0;
-  right: 0;
-  top: 60%;
+
+
+
+
+#bg {
+  height: 50%;
+  width: 500px;
+  background:  url('/assets/imgs/leaves.jpg') no-repeat center center/cover;
+  border-radius: 0 0 45% 45%;
+  margin-left: -19vw;
+  position: relative;
+  //background:rgb(195, 90, 236) ;
 }
-.wrap {
-  padding: 4%;
-}
-input {
-  padding: 5%;
-  border: solid black 1px;
-  border-radius: 15px;
-  margin: 0 auto;
-  display: flex;
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
-  width: 15rem;
+ion-fab {
+  ion-icon {
+      font-size: 2.5rem;
+  }
 }
 
-ion-button {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 30px;
-  --box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+
+.fab{
+  --background: rgb(240, 159, 159);
+  --background-activated:rgb(240, 159, 159);
 }
 
-label {
-  margin-top: -6px !important;
+ion-header {
+ 
+ 
+  ion-list {
+    height: 40vh;
+    background: url('/assets/imgs/leaves.jpg') no-repeat center center/cover;
+      border-radius: 0 0 20px 20px;
+      padding-bottom: 7vh;
+      ion-item {
+          ion-label {
+              font-weight: bold;
+              font-size: 1.2rem;
+              letter-spacing: 0.5px;
+          }
+          ion-avatar {
+              background: white;
+          }
+      }
+  }
+  .popover {
+      margin: 0 8px;
+      ion-searchbar {
+          --border-radius: 20px;
+          margin-top: -30px;
+      }
+  }
 }
-ion-card {
-  height: 32rem;
+
+.content{
+
+  margin-top: 2rem;
+
+  
 }

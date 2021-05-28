@@ -23,6 +23,7 @@ export class HomePagePage implements OnInit {
   dateMulti: string[];
   type: 'string';
   task: any;
+  details:any;
   constructor(
     private router: Router,
     public _route: ActivatedRoute,
@@ -45,6 +46,24 @@ export class HomePagePage implements OnInit {
           this.task = dat;
         });
     });
+
+
+    this._data.LogedUser().subscribe(res=>{
+      res.uid
+      this._data.GetUsers().doc(res.uid).snapshotChanges().subscribe(element=>{
+        //console.log(element);
+        //this.details = element;
+        //console.log(res.uid);
+      
+      })
+      this.afs.collection('users').doc(res.uid).valueChanges().subscribe(data=>{
+       console.log(data);
+        this.details=data;
+      })
+
+       
+    }) 
+
   }
 
   optionsMulti: CalendarComponentOptions = {

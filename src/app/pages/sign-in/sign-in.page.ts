@@ -67,4 +67,8 @@ export class SignInPage implements OnInit {
     });
     toast.present();
   }
+  toSign(){
+    this.router.navigate(['/sign'])
+  }
+
 }
