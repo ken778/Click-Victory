@@ -2,9 +2,7 @@
   "name": "taskSchedule",
   "integrations": {
     "capacitor": {},
-    "cordova": {
-      "enabled": false
-    }
+    "cordova": {}
   },
   "type": "angular"
 }

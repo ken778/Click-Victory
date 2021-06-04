@@ -1,8 +1,17 @@
-<ion-content >
+<ion-content *ngIf='details' >
   <h1>PROFILE</h1>
-  <ion-card *ngIf='details'> 
-   Email: {{details.email}}
+  <ion-card > 
+   NAME: {{details.name}}
   </ion-card>
+
+  <ion-card > 
+   SURNAME: {{details.surname}}
+  </ion-card>
+  
+  <ion-card > 
+   EMAIL: {{details.email}}
+  </ion-card>
+  <br>
   <div class="continue-with-Goole" (click)="logout()">
     <div class="icon">
      
@@ -12,6 +21,23 @@
       size="large"
       class="pro-icon"
       name="log-out-outline"
+      
+    ></ion-icon>
+  </div>
+  </div>
+  
+
+  </div>
+  <br>
+  <div class="continue-with-Goole" (click)="toComplete()">
+    <div class="icon">
+     
+    <div class="words">Update</div>
+    <div class="ico">
+      <ion-icon
+      size="large"
+      class="pro-icon"
+      name="pencil"
       
     ></ion-icon>
   </div>

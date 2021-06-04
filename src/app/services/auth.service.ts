@@ -91,5 +91,20 @@ export class AuthService {
         console.log('error occured, ', err);
       });
   }
+
+  UpdateStudentInfo(ref, record) {
+    return this.afs
+      .collection('users')
+      .doc(ref)
+      .update(record)
+      .then((results) => {
+        this.toast('Details updated','success')
+        this.router.navigate(['/home/profile'])
+        console.log('updated')
+      })
+      .catch((err) => {
+        console.log('error occured, ', err);
+      });
+  }
  
 }

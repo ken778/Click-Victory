@@ -55,6 +55,10 @@ ion-header {
 .content{
 
   margin-top: 2rem;
-
+ 
   
+}
+ion-button{
+  --background:rgb(233, 71, 233);
+  --background-activated:rgb(233, 71, 233);     
 }

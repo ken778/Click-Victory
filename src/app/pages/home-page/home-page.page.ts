@@ -7,6 +7,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { OpenpopPage } from '../openpop/openpop.page';
+import { PopoverComponent } from 'src/app/popover/popover.component';
+
+
 
 
 
@@ -33,6 +36,17 @@ export class HomePagePage implements OnInit {
     private toastr: ToastController
  
   ) {}
+
+  async popclick($event){
+    const popover = await this.popoverController.create({
+      component: PopoverComponent,
+      event
+    })
+    return await popover.present();
+
+  }
+
+ 
 
   ngOnInit() {
     this._data.LogedUser().subscribe((res) => {
@@ -106,5 +120,10 @@ export class HomePagePage implements OnInit {
     });
     toast.present();
   } //end of toast
+
+
+
+
+
  
 }

@@ -110,6 +110,14 @@ const routes: Routes = [
     path: 'user-login',
     loadChildren: () => import('./pages/user-login/user-login.module').then( m => m.UserLoginPageModule)
   },
+  {
+    path: 'complete-profile',
+    loadChildren: () => import('./pages/complete-profile/complete-profile.module').then( m => m.CompleteProfilePageModule)
+  },
+  {
+    path: 'notification',
+    loadChildren: () => import('./pages/notification/notification.module').then( m => m.NotificationPageModule)
+  },
 
 
 

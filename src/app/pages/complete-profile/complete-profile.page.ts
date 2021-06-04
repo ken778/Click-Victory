@@ -1,17 +1,18 @@
+import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.page.html',
-  styleUrls: ['./profile.page.scss'],
+  selector: 'app-complete-profile',
+  templateUrl: './complete-profile.page.html',
+  styleUrls: ['./complete-profile.page.scss'],
 })
-export class ProfilePage implements OnInit {
+export class CompleteProfilePage implements OnInit {
 
   details:any;
-
+  id:any;
   constructor(private  database: AngularFirestore, private auth : AuthService,private router:Router) { }
 
   ngOnInit() {
@@ -31,11 +32,15 @@ export class ProfilePage implements OnInit {
        
     }) 
   }
-
-  logout(){
-    this.auth.logout();
+    
+  Update(UpdateData:NgForm){
+    this.auth.LogedUser().subscribe(res=>{
+      res.uid;
+      this.id = res.uid;
+      this.auth.UpdateStudentInfo(this.id,UpdateData.value);
+    })
   }
-  toComplete(){
-    this.router.navigate(['/complete-profile'])
+  toSign(){
+    this.router.navigate(['/home/profile'])
   }
 }

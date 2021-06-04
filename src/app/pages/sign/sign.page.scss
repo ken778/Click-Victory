@@ -10,6 +10,7 @@ ion-content {
       margin-bottom: 15vh;
       letter-spacing: 3px;
       ion-label {
+        color: rgb(3, 3, 3);
         font-weight: bold;
         font-size: 3rem;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -27,4 +28,11 @@ ion-content {
   .log{
       --background:rgb(233, 71, 233);
       --background-activated:rgb(233, 71, 233);  
+  }
+  img{
+    width: 200px;
+    height: 100px;
+  }
+  ion-label{
+
   }
