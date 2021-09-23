@@ -24,6 +24,9 @@ export class FormPage implements OnInit {
     let date = new Date()
     let DateCreated = date;
     let createdAt = date.getTime();
+    let currentTime;
+
+    
 
     this.auth.LogedUser().subscribe((res) => {
       const applicationsData: any = {

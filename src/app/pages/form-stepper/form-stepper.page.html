@@ -1,0 +1,330 @@
+<ion-header>
+  <ion-toolbar class="top-toolbar">
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <mat-horizontal-stepper class="heard">
+    
+    <mat-step  >
+      <div class="back-button-and-name">
+        <div><ion-icon name="chevron-back-outline"></ion-icon></div>
+        <div> <p>Personal details</p></div>
+      </div>
+     
+      <div>
+        <form (ngSubmit)="personalDetails(detailsData)" #detailsData="ngForm">
+      
+          <div class="input-wrapper">
+            <ion-item lines="none">
+              <input size="100" class="inputCustom" type="text" placeholder="Name" name="name" #name="ngModel" ngModel
+                required>
+            </ion-item>
+          </div>
+          <div class="input-wrapper">
+            <ion-item lines="none">
+              <input size="100" class="inputCustom" type="text" placeholder="Surname" name="surname" #surname="ngModel"
+                ngModel required>
+            </ion-item>
+          </div>
+          <div class="input-wrapper">
+            <ion-item lines="none">
+              <input size="100" class="inputCustom" type="number" placeholder="ID Number" name="IDnumber" #IDnumber="ngModel"
+                ngModel required>
+            </ion-item>
+          </div>
+          <div class="input-wrapper">
+            <ion-item lines="none">
+              <input size="100" class="inputCustom" type="email" placeholder="Email" name="email" #email="ngModel" ngModel
+                required>
+            </ion-item>
+          </div>
+          <div class="input-wrapper">
+            <ion-item lines="none">
+              <input size="100" class="inputCustom" type="password" name="Password" #password="ngModel" ngModel required>
+            </ion-item>
+          </div>
+      
+          <div class="input-wrapper">
+      
+            <button type="submit" mat-button matStepperNext>Next</button>
+      
+          </div>
+      
+        </form>
+      
+      </div>
+    </mat-step>
+    <mat-step>
+          <div class="back-button-and-name">
+            <div>
+              <ion-icon matStepperPrevious name="chevron-back-outline"></ion-icon>
+            </div>
+            <div>
+              <p>physical address</p>
+            </div>
+          </div>
+          
+          <div>
+            <form (ngSubmit)="physicalAddress(physicalAdressData)" #physicalAdressData="ngForm">
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="text" placeholder="Street name & Number" name="StreetName"
+                    #StreetName="ngModel" ngModel required>
+                </ion-item>
+              </div>
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="text" placeholder="Suburb" name="suburb" #suburb="ngModel" ngModel
+                    required>
+                </ion-item>
+              </div>
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="text" placeholder="City" name="city" #city="ngModel" ngModel
+                    required>
+                </ion-item>
+              </div>
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="text" placeholder="Province" name="province" #province="ngModel"
+                    ngModel required>
+                </ion-item>
+              </div>
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="text" placeholder="Postal Code" name="postalCode"
+                    #postalCode="ngModel" ngModel required>
+                </ion-item>
+              </div>
+          
+              <div class="input-wrapper">
+          
+                <button type="submit" mat-button matStepperNext>Next</button>
+          
+              </div>
+            </form>
+          
+          </div>
+    </mat-step>
+    <mat-step>
+      
+          <div class="back-button-and-name">
+            <div><ion-icon name="chevron-back-outline"></ion-icon></div>
+            <div> <p>company details</p></div>
+          </div>
+          <div>
+            <form (ngSubmit)="companyDetails(companyData)" #companyData="ngForm">
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="number" placeholder="Registration Number" name="regNumber"
+                    #regNumber="ngModel" ngModel required>
+                </ion-item>
+              </div>
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="text" placeholder="Tax Number" name="taxNumber" #taxNumber="ngModel"
+                    ngModel required>
+                </ion-item>
+              </div>
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="text" placeholder="Contact Number" name="contactNumber"
+                    #contactNumber="ngModel" ngModel required>
+                </ion-item>
+              </div>
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="email" placeholder="Email Address" name="email" #email="ngModel"
+                    ngModel required>
+                </ion-item>
+              </div>
+              <div class="input-wrapper">
+          
+                <button type="submit" mat-button matStepperNext>Next</button>
+          
+              </div>
+            </form>
+          
+          </div>
+    </mat-step>
+    <mat-step>
+      
+          <div class="back-button-and-name">
+            <div><ion-icon name="chevron-back-outline"></ion-icon></div>
+            <div> <p>company physical address</p></div>
+          </div>
+          <div>
+            <form (ngSubmit)="companyAddress(companyAdressData)" #companyAdressData="ngForm">
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="text" placeholder="Street name & Number" name="street"
+                    #street="ngModel" ngModel required>
+                </ion-item>
+              </div>
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="text" placeholder="Suburb" name="suburb" #suburb="ngModel" ngModel
+                    required>
+                </ion-item>
+              </div>
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="text" placeholder="City" name="city" #city="ngModel" ngModel required>
+                </ion-item>
+              </div>
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="text" placeholder="Province" name="province" #province="ngModel"
+                    ngModel required>
+                </ion-item>
+              </div>
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="text" placeholder="Postal Code" name="postalCode"
+                    #postalCode="ngModel" ngModel required>
+                </ion-item>
+              </div>
+            
+              <div class="input-wrapper">
+            
+                <button type="submit" mat-button matStepperNext>Next</button>
+            
+              </div>
+            </form>
+            
+            </div>
+    </mat-step>
+    <mat-step>
+          <div class="back-button-and-name">
+            <div><ion-icon name="chevron-back-outline"></ion-icon></div>
+            <div> <p>banking details</p></div>
+          </div>
+          <div>
+            <form (ngSubmit)="bankingDetails(bankData)" #bankData="ngForm">
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="text" placeholder="Bank Name" name="bankName" #bankName="ngModel"
+                    ngModel required>
+                </ion-item>
+              </div>
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="text" placeholder="Account Type" name="accountType"
+                    #accountType="ngModel" ngModel required>
+                </ion-item>
+              </div>
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="text" placeholder="Account Holder Name" name="holderName"
+                    #holderName="ngModel" ngModel required>
+                </ion-item>
+              </div>
+              <div class="input-wrapper">
+                <ion-item lines="none">
+                  <input size="100" class="inputCustom" type="text" placeholder="Branch Name" name="branch" #branch="ngModel"
+                    ngModel required>
+                </ion-item>
+              </div>
+              <div class="input-wrapper">
+                <button type="submit" mat-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </div>
+    </mat-step>
+    <mat-step>
+      <div class="back-button-and-name">
+        <div>
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </div>
+        <div>
+          <p>security details</p>
+        </div>
+      </div>
+      <div>
+        <form (ngSubmit)="securityDetails(securityData)" #securityData="ngForm">
+          
+          <div class="input-wrapper">
+            <ion-item lines="none">
+              <input size="100" class="inputCustom" type="text" placeholder="Upload ID card" name="uploadCard"
+                #uploadCard="ngModel" ngModel required>
+            </ion-item>
+          </div>
+          <div class="input-wrapper">
+            <ion-item lines="none">
+              <input size="100" class="inputCustom" type="text" placeholder="Upload CK Documents" name="uploadDocument"
+                #uploadDocument="ngModel" ngModel required>
+            </ion-item>
+          </div>
+          <div class="input-wrapper">
+            <ion-item lines="none">
+              <input size="100" class="inputCustom" type="text" placeholder="Upload Form Photo" name="uploadPhoto"
+                #uploadPhoto="ngModel" ngModel required>
+            </ion-item>
+          </div>
+          <div class="input-wrapper">
+            <button type="submit" mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </div>
+    </mat-step>
+    <mat-step>
+    <div class="container">
+      <div class="section-form">
+        <a routerLink="/securitydetails">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </a>
+        <div class="img-profile" alt="profile-imgk">
+          <img src="../../assets/images/profilepic.png" alt="profilepicture">
+        </div>
+      </div>
+      <p class=" msg ">Enter the OPT code<br>sent to your email address</p>
+     
+
+      <div class="field-input ">
+        <ion-card>
+          <ion-input></ion-input>
+        </ion-card>
+      
+        <ion-card>
+          <ion-input></ion-input>
+        </ion-card>
+      
+        <ion-card>
+          <ion-input></ion-input>
+        </ion-card>
+      
+        <ion-card>
+          <ion-input></ion-input>
+        </ion-card>
+      </div>
+
+      <button matStepperNext>Next</button>
+
+  </div>
+  </mat-step>
+    <!-- <mat-step >
+      <p>Socialize with each other.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Step 3">
+      <p>You're welcome.</p>
+    </mat-step> -->
+    <!-- Icon overrides. -->
+    <!-- <ng-template matStepperIcon="phone">
+      <mat-icon>call_end</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="chat">
+      <mat-icon>forum</mat-icon>
+    </ng-template> -->
+  </mat-horizontal-stepper>
+</ion-content>
+<ion-footer class="footer">
+  <ion-toolbar class="ftr">
+      <p>Saved 4 minutes ago</p>
+  </ion-toolbar>
+</ion-footer>

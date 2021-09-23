@@ -19,13 +19,28 @@ import {
 import { environment } from 'src/environments/environment.prod';
 import { AuthService } from './services/auth.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatSliderModule } from '@angular/material/slider';
+import {MatButtonModule} from '@angular/material/button';
+import {MatStepperModule} from '@angular/material/stepper';
+import { ReactiveFormsModule} from '@angular/forms' 
+import {AddproductsComponent} from '../app/components/addproducts/addproducts.component'
+import {ProductspageComponent} from '../app/components/productspage/productspage.component'
+
+
 
 @NgModule({
-  declarations: [AppComponent, LandingPagePipe],
+  
+  declarations: [AppComponent, LandingPagePipe,AddproductsComponent,ProductspageComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
+    MatStepperModule,
+    MatButtonModule,
+    MatSliderModule,
     FormsModule,
+    ReactiveFormsModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
@@ -43,6 +58,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
+    BrowserAnimationsModule,
   ],
   providers: [
     AuthService,

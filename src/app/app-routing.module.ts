@@ -1,11 +1,36 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import {PersonaldetailsComponent} from './components/personaldetails/personaldetails.component'
+import {FormstepperComponent} from './components/formstepper/formstepper.component'
+import {GalleryComponent} from './components/gallery/gallery.component'
+import {DeliveriespageComponent} from './components/deliveriespage/deliveriespage.component'
+import {AdditionalproductsComponent} from './components/additionalproducts/additionalproducts.component'
+import {AddproductsComponent} from './components/addproducts/addproducts.component'
+import {ProductspageComponent} from './components/productspage/productspage.component'
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () =>
-      import('./home/home.module').then((m) => m.HomePageModule),
+    path: 'personaldetails', component:  PersonaldetailsComponent
+  },
+  {
+    path: 'addproducts', component:  AddproductsComponent
+  },
+  {
+    path: 'addproducts', component:  AddproductsComponent
+  }, 
+  {
+    path: 'productspage', component:  ProductspageComponent
+  },
+  {
+    path: 'formstepper', component:  FormstepperComponent
+  },
+  {
+    path: 'deliveriespage', component:  DeliveriespageComponent
+  },
+  {
+    path: 'additionalproducts/:ref', component:  AdditionalproductsComponent
+  },
+  {
+    path: 'gallery', component:  GalleryComponent
   },
   {
     path: '',
@@ -98,7 +123,8 @@ const routes: Routes = [
   {
     path: 'postpone/:ref',
     loadChildren: () => import('./pages/postpone/postpone.module').then( m => m.PostponePageModule)
-  },  {
+  },
+  {
     path: 'sign',
     loadChildren: () => import('./pages/sign/sign.module').then( m => m.SignPageModule)
   },
@@ -117,6 +143,10 @@ const routes: Routes = [
   {
     path: 'notification',
     loadChildren: () => import('./pages/notification/notification.module').then( m => m.NotificationPageModule)
+  },
+  {
+    path: 'form-stepper',
+    loadChildren: () => import('./pages/form-stepper/form-stepper.module').then( m => m.FormStepperPageModule)
   },
 
 

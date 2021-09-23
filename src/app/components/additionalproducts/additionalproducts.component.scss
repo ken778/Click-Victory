@@ -1,0 +1,146 @@
+ion-header {
+    width: 100%;
+    display: inline-block;
+    --background: #EFF9F3;
+}
+
+ion-toolbar.header-cont {
+    width: 100%;
+    --background: #EFF9F3;
+}
+
+ion-icon {
+    color: gray;
+    height: 35px;
+    width: 35px;
+    margin-left: -10px;
+}
+
+.cont {
+    padding: 0;
+    margin-top: 8px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cont a {
+    margin-right: 45px;
+}
+
+.cont img {
+    width: 33.77px;
+    height: 37.81px;
+    margin-left: 110px;
+}
+
+ion-content {
+    width: 100%;
+    padding: 40px;
+}
+
+ion-card.prod {
+    width: 144px;
+    height: 132px;
+    padding: 6px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 4px 5px 5px 5px rgba(233, 233, 233, 0.6) inset;
+    float: left;
+    margin-top: -143px;
+    margin-left: -4px;
+}
+
+ion-item.card-content {
+    width: 100%;
+    padding: 0;
+    margin: 25px;
+}
+
+ion-card.prod-field {
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.prod-details h5 {
+    border-radius: 25px;
+    padding: 4px;
+    /*margin: 15px;
+    width: 337px;
+    height: 48px;
+    box-shadow: 5px 5px 5px rgba(233, 233, 233) inset;*/
+}
+
+ion-card.prod-descrip {
+    width: 337px;
+    height: 170px;
+    border-radius: 25px;
+    margin: 25px auto;
+    padding-left: 22px;
+}
+
+h4 {
+    margin-left: 25px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+ion-item {
+    width: 100%;
+}
+
+ion-item a {
+    text-decoration: none;
+    color: #575F6B;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+}
+
+ion-button {
+    align-items: center;
+    --border-radius: 25px;
+    margin-top: 20px;
+    margin-left: 80px;
+    color: black;
+    width: 194px;
+}
+
+ion-button a {
+    text-align: center;
+    text-decoration: none;
+    color: #575F6B;
+    box-shadow: 4px 5px 5px 5px rgba(233, 233, 233, 0.6)
+}
+
+ion-footer {
+    width: 100%;
+    height: 126px;
+    --background: #EFF9F3;
+}
+
+ion-toolbar.ftr {
+    --background: #EFF9F3;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    ;
+}
+
+ion-toolbar.ftr img {
+    width: 58px;
+}
+
+div.image-ftr {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 10px;
+    align-items: center;
+}
+
+div.image-ftr .image {
+    justify-content: center;
+}

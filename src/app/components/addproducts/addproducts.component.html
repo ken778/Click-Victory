@@ -1,0 +1,75 @@
+<ion-header>
+    <ion-toolbar class="header-cont">
+
+        <div class="cont ">
+            <a routerLink="/productspage ">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </a>
+            <p>Add Product</p>
+            <img src="../../assets/images/logo.png ">
+        </div>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form (ngSubmit)="addProduct(productData)" #productData="ngForm">
+    <ion-item>
+        <div class="card-content">
+         
+            <ion-card class="prod-field">
+                <ion-input class="input" type="text" placeholder="Price"  name="price"
+                #price="ngModel" ngModel required></ion-input>
+            </ion-card>
+
+            <ion-card class="prod-field">
+                <ion-input type="text" placeholder="Quality"  name="quality"
+                #quality="ngModel" ngModel required></ion-input>
+            </ion-card>
+
+            <ion-card class="prod" (click)="pickImageFromGallery()">
+                
+                <img [src]="base64"/> 
+            </ion-card>
+        </div>
+    </ion-item>
+
+    <ion-card class="prod-details">
+        <ion-input type="text" placeholder="Product Name" name="productName"
+        #productName="ngModel" ngModel required></ion-input>
+    </ion-card>
+
+    <ion-card class="prod-details">
+        <ion-input type="text" placeholder="Crate, Units or Tonnes"  name="units"
+        #units="ngModel" ngModel required></ion-input>
+    </ion-card>
+
+    <ion-card class="prod-descrip">
+        <ion-input type="text" placeholder="Description" name="description"
+        #description="ngModel" ngModel required></ion-input>
+    </ion-card>
+
+    <ion-button color="light " type="submit">
+       SUBMIT LISTING
+    </ion-button>
+  </form>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar class="ftr">
+        <div class="image-ftr">
+            <div class="image">
+                <a routerLink="/productspage"> <img src="../../assets/images/Group 114.png"></a>
+            </div>
+            <div class="image">
+                <a routerLink="/clientprofile"> <img src="../../assets/images/Group 113@2x.png"></a>
+            </div>
+            <div class="image">
+                <a routerLink="/trainingpage"> <img src="../../assets/images/Group 112@2x.png"></a>
+            </div>
+            <div class="image">
+                <a routerLink="/deliveriespage"> <img src="../../assets/images/Group 111@2x.png"></a>
+            </div>
+        </div>
+    </ion-toolbar>
+</ion-footer>

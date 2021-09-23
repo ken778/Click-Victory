@@ -1,0 +1,81 @@
+<ion-header>
+    <ion-toolbar class="header-cont">
+        <div class="cont ">
+            <a routerLink="/verifyaccount">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </a>
+            <p>Products</p>
+            <img src="../../assets/images/logo.png ">
+        </div>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+
+    <div class="grid-block ">
+        <ion-grid>
+
+            <ion-row >
+                <ion-col *ngFor="let item of image">
+                 
+                    <img [src]="item.imgae"/> 
+                </ion-col>
+
+            </ion-row>
+
+
+        </ion-grid>
+
+        <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+            <ion-fab-button>
+                <a routerLink="/addproducts">
+                    <ion-icon name="add"></ion-icon>
+                </a>
+            </ion-fab-button>
+        </ion-fab>
+
+    </div>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar class="ftr">
+        <div class="image-ftr">
+            <div class="image">
+                <a routerLink="/productspage"> <img src="../../assets/images/Group 114.png"> </a>
+
+            </div>
+            <div class="image">
+                <a routerLink="/clientprofile"> <img src="../../assets/images/Group 113@2x.png"> </a>
+            </div>
+            <div class="image">
+                <a routerLink="/trainingpage"> <img src="../../assets/images/Group 112@2x.png"> </a>
+            </div>
+            <div class="image">
+                <a routerLink="/deliveriespage"> <img src="../../assets/images/Group 111@2x.png"> </a>
+            </div>
+        </div>
+    </ion-toolbar>
+</ion-footer>
+
+<!--<ion-footer>
+    <ion-toolbar class="ftr">
+        <ion-tabs>
+            <ion-tab-bar slot="bottom ">
+                <ion-tab-button tab="schedule ">
+                    <a routerLink="/productspage"> <img src="../../assets/images/Group 114.png"></a>
+                </ion-tab-button>
+
+                <ion-tab-button tab="speakers ">
+                    <a routerLink="#"> <img src="../../assets/images/Group 113@2x.png"></a>
+                </ion-tab-button>
+
+                <ion-tab-button tab="map ">
+                    <a routerLink="#"> <img src="../../assets/images/Group 112@2x.png"></a>
+                </ion-tab-button>
+
+                <ion-tab-button tab="about ">
+                    <a routerLink="#"> <img src="../../assets/images/Group 111@2x.png"></a>
+                </ion-tab-button>
+            </ion-tab-bar>
+        </ion-tabs>
+    </ion-toolbar>
+</ion-footer>-->

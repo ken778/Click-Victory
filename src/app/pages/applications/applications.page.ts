@@ -10,7 +10,11 @@ import { Route } from '@angular/compiler/src/core';
   styleUrls: ['./applications.page.scss'],
 })
 export class ApplicationsPage implements OnInit {
-
+  
+   date = new Date();
+   DateCreated = this.date;
+  currrentTime = this.date.getTime();
+  difference : any;
   total = 0;
   application:any;
   constructor(private router:Router,
@@ -28,8 +32,12 @@ export class ApplicationsPage implements OnInit {
         .subscribe((dat) => {
           console.log(dat);
           this.application = dat;
-          console.log(dat.length)
+          console.log(dat.length) 
           this.total = dat.length;
+          for(var i = 1; i <= dat.length; i++){
+              let i = this.date;
+              console.log(i)  
+          }   
         });
     });
   }
