@@ -1,0 +1,261 @@
+<ion-header>
+    <ion-toolbar>
+        <div class="header">
+            <div>
+                <a routerLink="/deliveriespage"></a>
+                <ion-icon name="chevron-back"></ion-icon>
+            </div>
+            <div>
+                <ion-title>
+                    funds
+                </ion-title>
+            </div>
+            <div>
+                <ion-icon size="large" name="wallet"></ion-icon>
+            </div>
+        </div>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-item lines="none" class="availableF">
+        <ion-label>
+            <ion-text>
+                <p>Available funds:</p>
+                <h3>R 12548.95</h3>
+            </ion-text>
+        </ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+        <div class="inAndOut">
+            <div>
+                <h1  [ngStyle] = "{'color' : value === 'incoming' ? 'black' : 'rgb(29, 165, 29)'  }" (click) = "changeValue('incoming')">INCOMING</h1>
+                <hr *ngIf = "value === 'incoming'"/>
+            </div>
+            <div>
+                <a >
+                    <h1 [ngStyle] = "{'color' : value === 'outgoing' ? 'black' : 'rgb(29, 165, 29)'  }" (click) = "changeValue('outgoing')">OUTGOING</h1>
+                    <hr *ngIf = "value === 'outgoing'" />
+                </a>
+            </div>
+        </div>
+    </ion-item>
+    <ion-item lines="none" class="history">
+        <ion-label>
+            <ion-text>
+                <h4>transactions history</h4>
+            </ion-text>
+        </ion-label>
+    </ion-item>
+
+
+
+    <div class="list-wrapper" *ngIf = "this.value === 'incoming'">
+        <ion-item class="listOfAmounts">
+            <div class="amounts">
+                <div>
+                    <p>29 jun 21</p>
+                </div>
+                <div>
+                    <p>sale # 2569</p>
+                </div>
+                <div>
+                    <p>r 896.95
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="listOfAmounts">
+            <div class="amounts">
+                <div>
+                    <p>29 jun 21</p>
+                </div>
+                <div>
+                    <p>sale # 2569</p>
+                </div>
+                <div>
+                    <p>r 896.95
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="listOfAmounts">
+            <div class="amounts">
+                <div>
+                    <p>29 jun 21</p>
+                </div>
+                <div>
+                    <p>sale # 2569</p>
+                </div>
+                <div>
+                    <p>r 896.95
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="listOfAmounts">
+            <div class="amounts">
+                <div>
+                    <p>29 jun 21</p>
+                </div>
+                <div>
+                    <p>sale # 2569</p>
+                </div>
+                <div>
+                    <p>r 896.95
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="listOfAmounts">
+            <div class="amounts">
+                <div>
+                    <p>29 jun 21</p>
+                </div>
+                <div>
+                    <p>sale # 2569</p>
+                </div>
+                <div>
+                    <p>r 896.95
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="listOfAmounts">
+            <div class="amounts">
+                <div>
+                    <p>29 jun 21</p>
+                </div>
+                <div>
+                    <p>sale # 2569</p>
+                </div>
+                <div>
+                    <p>r 896.95
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="listOfAmounts">
+            <div class="amounts">
+                <div>
+                    <p>29 jun 21</p>
+                </div>
+                <div>
+                    <p>sale # 2569</p>
+                </div>
+                <div>
+                    <p>r 896.95
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="listOfAmounts">
+            <div class="amounts">
+                <div>
+                    <p>29 jun 21</p>
+                </div>
+                <div>
+                    <p>sale # 2569</p>
+                </div>
+                <div>
+                    <p>r 896.95
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="listOfAmounts">
+            <div class="amounts">
+                <div>
+                    <p>29 jun 21</p>
+                </div>
+                <div>
+                    <p>sale # 2569</p>
+                </div>
+                <div>
+                    <p>r 896.95
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="listOfAmounts">
+            <div class="amounts">
+                <div>
+                    <p>29 jun 21</p>
+                </div>
+                <div>
+                    <p>sale # 2569</p>
+                </div>
+                <div>
+                    <p>r 896.95
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="listOfAmounts">
+            <div class="amounts">
+                <div>
+                    <p>29 jun 21</p>
+                </div>
+                <div>
+                    <p>sale # 2569</p>
+                </div>
+                <div>
+                    <p>r 896.95
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="listOfAmounts">
+            <div class="amounts">
+                <div>
+                    <p>29 jun 21</p>
+                </div>
+                <div>
+                    <p>sale # 2569</p>
+                </div>
+                <div>
+                    <p>r 896.95
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </p>
+                </div>
+            </div>
+        </ion-item> 
+    </div>
+  
+  <div class="outGoingListWrapper" *ngIf = "this.value === 'outgoing'">
+<app-funds-out></app-funds-out>
+  </div>   
+
+</ion-content> 
+
+<ion-footer> 
+    <ion-toolbar class="ftr">
+        <div class="image-ftr">
+            <div class="image">
+                <a routerLink="/productspage"> <img src="../../assets/images/Group 114.png"> </a>
+
+            </div>
+            <div class="image">
+                <a routerLink="/clientprofile"> <img src="../../assets/images/Group 113@2x.png"> </a>
+            </div>
+            <div class="image">
+                <a routerLink="/trainingpage"> <img src="../../assets/images/Group 112@2x.png"> </a>
+            </div>
+            <div class="image">
+                <a routerLink="/deliveriespage"> <img src="../../assets/images/Group 111@2x.png"> </a>
+            </div>
+        </div>
+    </ion-toolbar>
+
+</ion-footer>

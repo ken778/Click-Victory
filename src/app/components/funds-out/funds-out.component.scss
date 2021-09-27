@@ -1,0 +1,94 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 4%;
+}
+
+ion-toolbar {
+    --background: rgb(237, 248, 246);
+}
+
+.header div:nth-child(1) {
+    ion-icon {
+        font-weight: 900 !important;
+        font-size: 30px;
+        opacity: 50%;
+    }
+}
+
+.header div:nth-child(2) {
+    float: right;
+    text-align: center;
+    ion-title {
+        text-transform: capitalize;
+        font-size: 20px;
+        opacity: 50%;
+        font-weight: 400;
+    }
+}
+
+.header div:nth-child(3) {
+    float: right;
+    text-align: right;
+    ion-icon {
+        color: rgb(149, 209, 59);
+    }
+}
+
+.availableF {
+    padding-top: 2%;
+    ion-text {
+        text-align: center;
+        h3 {
+            text-transform: capitalize;
+            color: rgb(143, 202, 53);
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}
+
+.inAndOut {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.inAndOut div:nth-child(1) {
+    h1 {
+        font-weight: 300;
+    }
+    text-align: center;
+}
+
+.inAndOut div:nth-child(2) {
+    text-align: center;
+    h1 {
+        color: rgb(29, 165, 29);
+        font-weight: 300;
+    }
+}
+
+.history {
+    h4 {
+        text-align: center;
+        text-transform: capitalize;
+    }
+}
+
+.amounts {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    ion-icon {
+        color: red;
+    }
+}
+
+.amounts>div {
+    text-align: center;
+    p {
+        text-transform: capitalize;
+        opacity: 60%;
+    }
+}

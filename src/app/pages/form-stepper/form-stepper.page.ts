@@ -7,6 +7,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { RegistrationViewModule } from 'src/app/modules/registration-view-module';
 
 @Component({
   selector: 'app-form-stepper',
@@ -18,12 +19,15 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class FormStepperPage implements OnInit {
 
+
+  name: any;
+
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   constructor(private _formBuilder: FormBuilder,  private auth: AuthService,
     private _afa: AngularFirestore,
     private router: Router,
-    private toastr: ToastController, private afauth: AngularFireAuth) { }
+    private toastr: ToastController, private afauth: AngularFireAuth, public registerViewModule : RegistrationViewModule) { }
 
   ngOnInit() {
     this.firstFormGroup = this._formBuilder.group({
@@ -35,170 +39,99 @@ export class FormStepperPage implements OnInit {
   }
 
   //sign up
-  personalDetails(detailsData: NgForm){
+  personalDetails(detailsData: NgForm) {
     {
-      this.afauth.createUserWithEmailAndPassword(detailsData.value.email,String(detailsData.value.password)).then((data)=>{
-        localStorage.setItem('key',data.user.uid);
+      //personal details
+     this.name=  this.registerViewModule.name = detailsData.value.name;
+     
+      this.registerViewModule.surname = detailsData.value.surname;
+      this.registerViewModule.idNumber = detailsData.value.IDnumber;
+      this.registerViewModule.email = detailsData.value.email;
+
+      //physical address
+      this.registerViewModule.street = detailsData.value.StreetName;
+      this.registerViewModule.suburb = detailsData.value.suburb;
+      this.registerViewModule.city = detailsData.value.city;
+      this.registerViewModule.postalCode = detailsData.value.postalCode;
+
+      //company details
+      this.registerViewModule.regNumber = detailsData.value.regNumber;
+      this.registerViewModule.taxNumber = detailsData.value.taxNumber;
+      this.registerViewModule.contactNumber= detailsData.value.contactNumber;
+      this.registerViewModule.companyEmail = detailsData.value.Companyemail;
+
+      //comapny address
+      this.registerViewModule.street = detailsData.value.street;
+      this.registerViewModule.companySuburb = detailsData.value.companysuburb;
+      this.registerViewModule.companyProvince= detailsData.value.companyCity;
+      this.registerViewModule.comapanyPostalCode = detailsData.value.companyPostalCode;
+
+      //banking details
+      this.registerViewModule.bankName = detailsData.value.bankName;
+      this.registerViewModule.branchName = detailsData.value.branch;
+      this.registerViewModule.accountHolder= detailsData.value.holderName;
+      this.registerViewModule.accountType = detailsData.value.accountType;
+
+      this.registerViewModule;
+
+
+      this.afauth.createUserWithEmailAndPassword(detailsData.value.email, String(detailsData.value.password)).then((data) => {
+        localStorage.setItem('key', data.user.uid);
         data.user.sendEmailVerification()
-        if(data.user.sendEmailVerification()){
+        if (data.user.sendEmailVerification()) {
           this._afa.collection('personalDetails').doc(data.user.uid).set({
-            userId : data.user.uid,
-            name: detailsData.value.name, 
+          
+
+
+         
+            name: detailsData.value.name,
             surname: detailsData.value.surname,
             idNo: detailsData.value.IDnumber,
             email: detailsData.value.email,
-          }).then((y)=>{
+            
+
+            //physical address details
+            StreetName: detailsData.value.StreetName,
+            suburb: detailsData.value.suburb,
+            city: detailsData.value.city,
+            postalCode: detailsData.value.postalCode,
+
+            //company details
+            regNumber: detailsData.value.regNumber,
+            taxNumber: detailsData.value.taxNumber,
+            contactNumber: detailsData.value.contactNumber,
+            companyemail: detailsData.value.companyemail,
+
+            //company address
+            street: detailsData.value.street,
+            companysuburb: detailsData.value.companysuburb,
+            companyCity: detailsData.value.companyCity,
+            companyProvince: detailsData.value.companyProvince,
+            companyPostalCode: detailsData.value.companyPostalCode,
+
+            //banking details
+            bankName: detailsData.value.bankName,
+            accountType: detailsData.value.accountType,
+            holderName: detailsData.value.holderName,
+            branch: detailsData.value.branch,
+
+          }).then((y) => {
             console.log('successfully registered')
           })
-         
-        }else{
+
+        } else {
 
         }
-      
-      }).catch((error)=>{
-       
+
+      }).catch((error) => {
+
         this.toast(error.message, 'danger');
       })
     }
   }//end of register
 
-  // //recording personal details
-  // personalDetails(detailsData: NgForm){
-  //   this.auth.LogedUser().subscribe((res) => {
-  //     const personalData: any = {
-  //       userID: res.uid,
-  //       name: detailsData.value.name,
-  //       surname: detailsData.value.surname,
-  //       idNo: detailsData.value.IDnumber,
-  //       email: detailsData.value.email,
-      
-  //     }; //end of data
 
-  //     //add personal details
-  //     this._afa
-  //       .collection('personalDetails')
-  //       .add(personalData)
-  //       .then(() => {
-  //         console.log('added')
-          
-  //       })
-  //       .catch((err) => {
-  //         console.log(err.message);
-  //       });
-  //   });
-
-  // }
-
-  //physical address form
-  physicalAddress(physicalAdressData: NgForm) {
-    this.auth.LogedUser().subscribe((res) => {
-      const physicalAddressData: any = {
-        userID: res.uid,
-        StreetName: physicalAdressData.value.StreetName,
-        suburb: physicalAdressData.value.suburb,
-        city: physicalAdressData.value.city,
-        postalCode: physicalAdressData.value.postalCode,
-
-      }; //end of data
-      
-
-      //add data
-      this._afa
-        .collection('physicalAddress')
-        .add(physicalAddressData)
-        .then(() => {
-          console.log('added')
-
-        })
-        .catch((err) => {
-          console.log(err.message);
-        });
-    });
-
-  }
-
-  //company details
-  companyDetails(companyData: NgForm){
-    this.auth.LogedUser().subscribe((res) => {
-      const companyDetails: any = {
-        userID: res.uid,
-        regNumber: companyData.value.regNumber,
-        taxNumber: companyData.value.taxNumber,
-        contactNumber: companyData.value.contactNumber,
-        email: companyData.value.email,
-
-      }; //end of data
-
-      //add data
-      this._afa
-        .collection('companyDetails')
-        .add(companyDetails)
-        .then(() => {
-          console.log('added')
-
-        })
-        .catch((err) => {
-          console.log(err.message);
-        });
-    });
-  }
-
-  //adding company address
-  companyAddress(companyAdressData:NgForm){
-    this.auth.LogedUser().subscribe((res) => {
-      const companyAddress: any = {
-        userID: res.uid,
-        street: companyAdressData.value.street,
-        suburb: companyAdressData.value.suburb,
-        city: companyAdressData.value.city,
-        province: companyAdressData.value.province,
-        postalCode: companyAdressData.value.postalCode,
-
-      }; //end of data
-
-      //add data
-      this._afa
-        .collection('companyAddress')
-        .add(companyAddress)
-        .then(() => {
-          console.log('added')
-
-        })
-        .catch((err) => {
-          console.log(err.message);
-        });
-    });
-  }
-  //adding banking details
-  bankingDetails(bankData : NgForm){
-    this.auth.LogedUser().subscribe((res) => {
-      const bankingDetails: any = {
-        userID: res.uid,
-        bankName: bankData.value.bankName,
-        accountType: bankData.value.accountType,
-        holderName: bankData.value.holderName,
-        branch: bankData.value.branch,
-
-      }; //end of data
-
-      //add data
-      this._afa
-        .collection('bakingDetails')
-        .add(bankingDetails)
-        .then(() => {
-          console.log('added')
-
-        })
-        .catch((err) => {
-          console.log(err.message);
-        });
-    });
-  }
-
-  //adding security details
- 
-
-   async toast(message, status){
+  async toast(message, status) {
     const toast = await this.toastr.create({
       message: message,
       position: 'top',
@@ -207,5 +140,8 @@ export class FormStepperPage implements OnInit {
     })
     toast.present()
   }//end of toast
+
+
+ 
 
 }

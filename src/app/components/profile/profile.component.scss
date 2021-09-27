@@ -1,0 +1,151 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 4%;
+}
+
+ion-toolbar {
+    --background: rgb(237, 248, 246);
+}
+
+.header div:nth-child(1) {
+    ion-icon {
+        font-weight: 900 !important;
+        font-size: 30px;
+        opacity: 50%;
+    }
+}
+
+.header div:nth-child(2) {
+    float: right;
+    text-align: center;
+    ion-title {
+        text-transform: capitalize;
+        font-size: 20px;
+        opacity: 50%;
+        font-weight: 400;
+    }
+}
+
+.header div:nth-child(3) {
+    float: right;
+    text-align: right;
+    ion-icon {
+        color: rgb(150, 207, 65);
+    }
+}
+.banner{
+    width: 100%;
+    float: left;
+    background-image: url(../../../assets/images/pexels-pixabay-265216@2x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+}
+.profile-content{
+    width: 100%;
+    float: left;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    ion-avatar{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -30px;
+        height: 70px;
+        width: 70px;
+        img{
+     
+        }
+    }
+    ion-text p:nth-child(2){
+        margin-top: -15px;
+        text-transform: capitalize;
+    }
+    ion-text p:nth-child(1){
+        color: rgb(112, 175, 49);
+        font-weight: 600;
+    }
+}
+.profile-content > div{
+    text-align: center;
+}
+.details{
+    width: 100%;
+    float: left;
+    ion-text{
+        h1{
+            color: rgb(112, 175, 49);
+            text-transform: capitalize;
+        }
+    }
+}
+.available-funds{
+    width: 100%;
+    float: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    ion-text{
+        color: rgb(112, 175, 49);
+    }
+}
+.available-funds div:nth-child(2){
+    text-align: right;
+    margin-right: 20px;
+  
+}
+.available-funds div:nth-child(1){
+ 
+    margin-left: 20px;
+  
+}
+.upcoming-training{
+    h2{
+        text-align: center;
+        font-weight: 600;
+        opacity: 80%;
+        text-transform: capitalize;
+    }
+    h4{
+        margin-left: 30px;
+        opacity: 60%;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+}
+.upcoming-training-details{
+    width: 100%;
+    float: left;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    ul{
+        opacity: 60%;
+        li{
+            list-style: none;
+            text-transform: capitalize;
+        }
+    }
+}
+.upcoming-training-details div:nth-child(2){
+    text-align: left;
+    float: left;
+
+}
+.upcoming-training-details div:nth-child(1){
+  
+   
+}
+.products{
+    width: 100%;
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    img{
+       
+    }
+
+}
+.products > div{
+    text-align: center;
+}

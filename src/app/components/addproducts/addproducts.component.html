@@ -1,16 +1,22 @@
+
 <ion-header>
-    <ion-toolbar class="header-cont">
-
-        <div class="cont ">
-            <a routerLink="/productspage ">
-                <ion-icon name="chevron-back-outline"></ion-icon>
-            </a>
-            <p>Add Product</p>
-            <img src="../../assets/images/logo.png ">
+    <ion-toolbar>
+        <div class="header">
+            <div>
+                <a routerLink="/deliveriespage"></a>
+                <ion-icon (click)="backToHome()" name="chevron-back"></ion-icon>
+            </div>
+            <div>
+                <ion-title>
+                  add product
+                </ion-title>
+            </div>
+            <div>
+              <img src="../../assets/images/logo.png ">
+            </div>
         </div>
-
     </ion-toolbar>
-</ion-header>
+  </ion-header>
 
 <ion-content>
     <form (ngSubmit)="addProduct(productData)" #productData="ngForm">
@@ -55,7 +61,7 @@
   </form>
 </ion-content>
 
-<ion-footer>
+<!-- <ion-footer>
     <ion-toolbar class="ftr">
         <div class="image-ftr">
             <div class="image">
@@ -72,4 +78,4 @@
             </div>
         </div>
     </ion-toolbar>
-</ion-footer>
+</ion-footer> -->

@@ -2,7 +2,7 @@
     <ion-toolbar class="header-cont">
         <div class="cont ">
             <a routerLink="/addproducts">
-                <ion-icon name="chevron-back-outline"></ion-icon>
+                <ion-icon (click)="backToProductsPage()" name="chevron-back-outline"></ion-icon>
             </a>
             <p>Add Products</p>
             <img src="../../assets/images/logo.png ">
@@ -11,35 +11,42 @@
 </ion-header>
 
 <ion-content>
-    <ion-item>
-        <div class="card-content">
-            <ion-card class="prod-field">
-                <p>Price card</p>
-            </ion-card>
+     <div class="topDetails">
+         <div>
+             <ion-card class="productPic">
+                 <img src="../../../assets/images/pic2.jpg" alt="">
+             </ion-card>
+         </div>
+         <div>
+             <ion-text>
+                 <h5>R9854</h5>
+                 <h5>R9854</h5>
+             </ion-text>
+         </div>
+     </div>
+     <div class="name">
+        <h4>Bananas</h4>
+     </div>
+     <div class="description">
+         <ion-text>
+             <p>Lorem ipsumFugit esse molestiminus aspernatur nostrum vitae voluptatibus voluptate error. Sequi coibus,molestiminus aspernatur nostrum vitae voluptatibus voluptate error. Sequi coibus,</p>
+         </ion-text>
+     </div>
+    
+   
 
-            <ion-card class="prod-field">
-                <p>Quality card</p>
-            </ion-card>
+    
+    <ion-button color="light" class="editButton">
+        <a routerLink="/productspage">EDIT</a>
+    </ion-button>
 
-            <ion-card class="prod">
-                <p>This is where your product appear</p>
-            </ion-card>
-        </div>
-    </ion-item>
-    <h4>Bananas</h4>
-    <ion-card class="prod-descrip">
-        <p>This is where description will appear</p>
-    </ion-card>
-
-    <ion-item><a routerLink="/addproducts">EDIT</a></ion-item>
-
-    <ion-button color="light ">
-        <a routerLink="/productspage">CLOSE</a>
+    <ion-button color="light" (click)="back()">
+        CLOSE
     </ion-button>
 
 </ion-content>
 
-<ion-footer>
+<!-- <ion-footer>
     <ion-toolbar class="ftr">
         <div class="image-ftr">
             <div class="image">
@@ -56,4 +63,4 @@
             </div>
         </div>
     </ion-toolbar>
-</ion-footer>
+</ion-footer> -->

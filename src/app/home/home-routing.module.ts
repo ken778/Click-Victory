@@ -2,44 +2,36 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePage } from './home.page';
 
+import {ProductspageComponent} from '../components/productspage/productspage.component';
+import { ProfileComponent } from '../components/profile/profile.component';
+import { TrainingpageComponent } from '../components/trainingpage/trainingpage.component';
+import {DeliveriespageComponent} from '../components/deliveriespage/deliveriespage.component';
+
 const routes: Routes = [
   {
     path: '',
     component: HomePage,
     children:[
+
       {
-        path:'home-page',
-        children:[
-          {
-            path:'',
-            loadChildren: () => import('../pages/home-page/home-page.module').then( m => m.HomePagePageModule)
-          }
-        ]
+        path: 'deliveriespage', component:  DeliveriespageComponent
+      },
+      {
+        path: 'profile', component:  ProfileComponent
+      },
+      {
+        path: 'productspage', component:  ProductspageComponent
+      },
+      {
+        path: 'trainingpage', component:  TrainingpageComponent
       },
       {
         path: '',
-        redirectTo: 'home-page',
+        redirectTo: 'productspage',
         pathMatch: 'full'
       },
      
-      {
-        path:'applications',
-        children:[
-          {
-            path:'',
-            loadChildren: () => import('../pages/applications/applications.module').then( m => m.ApplicationsPageModule)
-          }
-        ]
-      },
-      {
-        path:'profile',
-        children:[
-          {
-            path:'',
-            loadChildren: () => import('../pages/profile/profile.module').then( m => m.ProfilePageModule)
-          }
-        ]
-      },
+  
     ]
   }
 ];

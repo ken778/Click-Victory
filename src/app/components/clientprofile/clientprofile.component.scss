@@ -1,0 +1,207 @@
+ion-header {
+    width: 100%;
+    display: inline-block;
+    --background: #EFF9F3;
+}
+
+ion-toolbar.header-cont {
+    width: 100%;
+    --background: #EFF9F3;
+}
+
+ion-icon {
+    color: gray;
+    height: 35px;
+    width: 35px;
+    margin-left: -10px;
+}
+
+.cont {
+    padding: 0;
+    margin-top: 8px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cont a {
+    margin-right: 45px;
+}
+
+.cont img {
+    width: 33.77px;
+    height: 37.81px;
+    margin-left: 110px;
+}
+
+
+/*content*/
+
+ion-content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    --border-bottom-left-radius: 25px;
+    --border-bottom-right-radius: 25px;
+}
+
+ion-item .profile-pic {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+div.profile {
+    width: 375px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+
+/*.profile-pic div.profile,
+.profile-pic div.person {
+    width: 100%;
+}*/
+
+.profile-pic .person {
+    display: flex;
+    justify-content: space-evenly;
+    /*position: relative;
+    top: -26px;*/
+}
+
+.profile-pic .person img {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    top: -40px;
+    /*left: 30px;*/
+}
+
+.profile-pic .person p {
+    font-size: 15px;
+    position: relative;
+    top: -6px;
+}
+
+ion-item.details {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details .name h3 {
+    font-size: 22px;
+}
+
+div.name ion-icon {
+    --background: grey;
+}
+
+div.details h3,
+p.fnd {
+    color: green;
+}
+
+ion-item div.training {
+    width: 100%;
+    margin: 20px auto;
+    padding: 0;
+}
+
+div.training {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid gray;
+}
+
+div.training h4 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div.training ion-grid {
+    width: 100%;
+    margin-left: -6px;
+    padding: 5px;
+}
+
+div.training ion-row,
+div.training ion-col {
+    border: none;
+}
+
+div .grid {
+    margin-top: 5px !important;
+    width: 375px;
+    margin: 0;
+    padding: 0;
+}
+
+.grid ion-grid {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+ion-grid ion-row {
+    border-bottom: 2px solid rgb(196, 196, 196);
+    margin: 0;
+    padding: 0;
+}
+
+ion-row ion-col {
+    border-left: 2px solid rgb(196, 196, 196);
+    margin: 0;
+    padding: 0;
+}
+
+
+/*ion-item.grid ion-row {
+    width: 100%;
+}*/
+
+
+/*footer*/
+
+ion-footer {
+    width: 100%;
+    --background: #EFF9F3;
+}
+
+ion-toolbar.ftr {
+    --background: #EFF9F3;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    ;
+}
+
+ion-toolbar.ftr img {
+    width: 58px;
+}
+
+div.image-ftr {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 10px;
+    align-items: center;
+}
+
+div.image-ftr .image {
+    justify-content: center;
+}
+
+div.image a:active {
+    color: green;
+}

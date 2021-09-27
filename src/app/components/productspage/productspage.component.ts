@@ -14,12 +14,10 @@ export class ProductspageComponent implements OnInit {
 
   ngOnInit() {
     this.afs
-    .collection('products')
-    .valueChanges()
-    .subscribe((dat) => {
-       console.log(dat)
-       this.image = dat;
-    });
+    .collection('products').snapshotChanges().subscribe((dat)=>{
+      console.log(dat)
+      this.image = dat;
+    })
   }
 
 }

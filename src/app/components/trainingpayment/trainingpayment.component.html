@@ -1,0 +1,76 @@
+<ion-header>
+    <ion-toolbar>
+        <div class="header">
+            <div>
+                <a routerLink="/trainingpage"></a>
+                <ion-icon name="chevron-back"></ion-icon>
+            </div>
+            <div>
+                <ion-title>
+                    Training Payment
+                </ion-title>
+            </div>
+            <div>
+                <img src="../../assets/images/logo.png ">
+            </div>
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="payment">
+        <h2> Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;550.00 </h2>
+    </div>
+
+    <div class="card-image">
+        <img src="../../assets/images/bankcard.png">
+    </div>
+
+    <div class="text-field">
+        <ion-card class="input">
+            <ion-input type="text" placeholder="Account Holder Name">
+            </ion-input>
+        </ion-card>
+
+        <ion-card class="input">
+            <ion-input type="text" placeholder="Account Number ">
+            </ion-input>
+        </ion-card>
+        <div class="input-field">
+            <ion-card>
+                <ion-input type="number" placeholder="Expiry Date">
+                </ion-input>
+            </ion-card>
+
+            <ion-card>
+                <ion-input type="number" placeholder="CVV">
+                </ion-input>
+            </ion-card>
+        </div>
+    </div>
+
+    <ion-button (click)="OpenConfirmDialogue()" color="light ">
+        <!--<a href="/securitydetails"> NEXT</a>-->NEXT
+    </ion-button>
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar class="ftr">
+        <div class="image-ftr">
+            <div class="image">
+                <a routerLink="/productspage"> <img src="../../assets/images/Group 114.png"> </a>
+
+            </div>
+            <div class="image">
+                <a routerLink="/clientprofile"> <img src="../../assets/images/Group 113@2x.png"> </a>
+            </div>
+            <div class="image">
+                <a routerLink="/trainingpage"> <img src="../../assets/images/Group 112@2x.png"> </a>
+            </div>
+            <div class="image">
+                <a routerLink="/deliveriespage"> <img src="../../assets/images/Group 111@2x.png"> </a>
+            </div>
+        </div>
+    </ion-toolbar>
+</ion-footer>

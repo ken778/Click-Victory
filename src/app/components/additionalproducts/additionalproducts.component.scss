@@ -144,3 +144,63 @@ div.image-ftr {
 div.image-ftr .image {
     justify-content: center;
 }
+
+//tumi styling
+
+.topDetails{
+    width:100%;
+    float: left;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+.topDetails > div{
+    text-align: center;
+}
+.topDetails div:nth-child(1){
+   
+}
+.topDetails div:nth-child(2){
+    //background-color: rgb(143, 79, 79);
+    ion-text{
+        h5{
+            margin-top:35px;
+             text-align: left;
+             font-size: 18px;
+             font-weight: 500;
+
+        }
+       
+    }
+    ion-text h5:nth-child(1){
+        color: rgb(135, 199, 39);
+    }
+}
+ .productPic{
+     width: 190px;
+    height: 190px;
+    img{
+        width: 150px;
+        height: 150px;
+        margin-top: 20px;
+        
+    }
+ }
+ .name{
+     width: 100%; 
+     float: left;
+ }
+ .description{
+     margin: auto;
+     width: 95%;
+     float:left;
+     ion-text{
+      
+         p{
+            padding: 6%;
+         }
+     }
+ }
+ .editButton{
+     background: transparent;
+
+ }

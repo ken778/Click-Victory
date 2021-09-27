@@ -17,7 +17,8 @@ export class AddproductsComponent implements OnInit {
     private auth: AuthService,
     private _afa: AngularFirestore,
     private router: Router,
-    private toastr: ToastController
+    private toastr: ToastController,
+
   ) { }
 
   ngOnInit() {
@@ -75,5 +76,9 @@ export class AddproductsComponent implements OnInit {
 
     toast.present();
   } // end of toast
+
+  backToHome(){
+    this.router.navigate(['/home'])
+  }
 
 }

@@ -24,19 +24,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatButtonModule} from '@angular/material/button';
 import {MatStepperModule} from '@angular/material/stepper';
-import { ReactiveFormsModule} from '@angular/forms' 
-import {AddproductsComponent} from '../app/components/addproducts/addproducts.component'
-import {ProductspageComponent} from '../app/components/productspage/productspage.component'
+import { ReactiveFormsModule} from '@angular/forms'; 
+import {AddproductsComponent} from '../app/components/addproducts/addproducts.component';
+import {ProductspageComponent} from '../app/components/productspage/productspage.component';
+import {FundspageComponent} from './components/fundspage/fundspage.component';
+import { FundsOutComponent } from './components/funds-out/funds-out.component';
+import { RegistrationViewModule } from './modules/registration-view-module';
+
 
 
 
 @NgModule({
   
-  declarations: [AppComponent, LandingPagePipe,AddproductsComponent,ProductspageComponent],
+  declarations: [AppComponent,LandingPagePipe,AddproductsComponent,ProductspageComponent, FundspageComponent, FundsOutComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
     MatStepperModule,
+    
     MatButtonModule,
     MatSliderModule,
     FormsModule,
@@ -62,7 +67,7 @@ import {ProductspageComponent} from '../app/components/productspage/productspage
   ],
   providers: [
     AuthService,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },RegistrationViewModule
   ],
   bootstrap: [AppComponent],
 })
