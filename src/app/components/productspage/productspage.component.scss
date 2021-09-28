@@ -13,6 +13,7 @@ ion-toolbar {
         font-weight: 900 !important;
         font-size: 30px;
         opacity: 50%;
+        margin-top: 12px;
     }
 }
 
@@ -173,10 +174,12 @@ div.cont img {
         float: left;
         display: grid;
         grid-template-columns: repeat(3,1fr);
+        grid-gap: 1px;
        
     }
     .product-images > div{
         border: 2px solid rgb(203, 211, 219);
+    
     }
     ion-text{
         p{

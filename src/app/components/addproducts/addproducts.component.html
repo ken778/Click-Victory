@@ -8,7 +8,7 @@
             </div>
             <div>
                 <ion-title>
-                  add product
+                  Products 
                 </ion-title>
             </div>
             <div>
@@ -32,9 +32,9 @@
                 <ion-input type="text" placeholder="Quality"  name="quality"
                 #quality="ngModel" ngModel required></ion-input>
             </ion-card>
-
-            <ion-card class="prod" (click)="pickImageFromGallery()">
-                
+            <ion-icon (click)="pickImageFromGallery()" class="camera" name="camera-sharp"></ion-icon>
+            <ion-card class="prod" >
+               
                 <img [src]="base64"/> 
             </ion-card>
         </div>

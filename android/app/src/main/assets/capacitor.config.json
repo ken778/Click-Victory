@@ -1,16 +1,16 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "taskSchedule",
-  "bundledWebRuntime": false,
-  "npmClient": "npm",
-  "webDir": "www",
-  "plugins": {
-    "SplashScreen": {
-      "launchShowDuration": 0
-    }
-  },
-  "cordova": {},
-  "server": {
-    "url": "http://10.196.0.70:8102"
-  }
+	"appId": "io.ionic.starter",
+	"appName": "click victory",
+	"bundledWebRuntime": false,
+	"npmClient": "npm",
+	"webDir": "www",
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 0
+		}
+	},
+	"cordova": {},
+	"server": {
+		"url": "http://10.196.0.70:8102"
+	}
 }

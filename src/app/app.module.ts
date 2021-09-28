@@ -29,16 +29,18 @@ import {AddproductsComponent} from '../app/components/addproducts/addproducts.co
 import {ProductspageComponent} from '../app/components/productspage/productspage.component';
 import {AdditionalproductsComponent} from '../app/components/additionalproducts/additionalproducts.component';
 import {FundspageComponent} from './components/fundspage/fundspage.component';
+import {ProfileComponent} from './components/profile/profile.component';
 
 import { FundsOutComponent } from './components/funds-out/funds-out.component';
 import { RegistrationViewModule } from './modules/registration-view-module';
+import { LoginPipe } from './pages/login.pipe';
 
  
  
 
 @NgModule({
   
-  declarations: [AppComponent,AdditionalproductsComponent,LandingPagePipe,AddproductsComponent,ProductspageComponent, FundspageComponent, FundsOutComponent],
+  declarations: [AppComponent,ProfileComponent,AdditionalproductsComponent,LandingPagePipe,AddproductsComponent,ProductspageComponent, FundspageComponent, FundsOutComponent, LoginPipe],
   entryComponents: [],
   imports: [
     BrowserModule,

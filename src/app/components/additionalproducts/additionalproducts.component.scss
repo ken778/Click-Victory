@@ -1,19 +1,42 @@
-ion-header {
-    width: 100%;
-    display: inline-block;
-    --background: #EFF9F3;
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 4%;
 }
 
-ion-toolbar.header-cont {
-    width: 100%;
-    --background: #EFF9F3;
+ion-toolbar {
+    --background: rgb(237, 248, 246);
 }
 
-ion-icon {
-    color: gray;
-    height: 35px;
-    width: 35px;
-    margin-left: -10px;
+.header div:nth-child(1) {
+    ion-icon {
+        font-weight: 900 !important;
+        font-size: 30px;
+        opacity: 50%;
+        margin-top: 10px;
+    }
+}
+
+.header div:nth-child(2) {
+    float: right;
+    text-align: center;
+    ion-title {
+        text-transform: capitalize;
+        font-size: 20px;
+        opacity: 50%;
+        font-weight: 400;
+    }
+}
+
+.header div:nth-child(3) {
+    float: right;
+    text-align: right;
+    ion-icon {
+        color: rgb(150, 207, 65);
+    }
+    img{
+        margin-top:5px;
+    }
 }
 
 .cont {

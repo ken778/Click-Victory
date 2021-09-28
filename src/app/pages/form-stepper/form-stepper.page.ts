@@ -18,9 +18,37 @@ import { RegistrationViewModule } from 'src/app/modules/registration-view-module
   }]
 })
 export class FormStepperPage implements OnInit {
-
-
+  
+  //variables
   name: any;
+  surname: any;
+  IDnumber: any;
+  email: any;
+  password: any;
+  streetName: any;
+  suburb: any;
+  city: any;
+  province: any;
+  postalCode: any;
+  regNumber: any;
+  taxNumber: any;
+  contactNumber: any;
+  companyEmail: any;
+  street: any;
+  companySuburb: any;
+  companyCity: any;
+  companyProvince: any;
+  companyPostalCode: any;
+  bankName: any;
+  accountType: any;
+  holderName: any;
+  branch: any;
+ 
+
+
+
+
+
 
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
@@ -145,5 +173,55 @@ export class FormStepperPage implements OnInit {
 
 
     }
+
+    //testing register
+    register(){
+      this.afauth.createUserWithEmailAndPassword(String(this.email) , this.password).then((data) => {
+        //  localStorage.setItem('key', data.user.uid);
+         data.user.sendEmailVerification()
+         if (data.user.sendEmailVerification()) {
+         this._afa.collection('personalDetails').doc(data.user.uid).set({
+
+          userID: data.user.uid,
+          name : this.name,
+          surname :this.surname,
+          IDnumber:this.IDnumber,
+          email :this.email,
+          streetName :this.streetName,
+          suburb :this.surname,
+          city : this.city,
+          province : this.province,
+          postalCode :this.postalCode,
+          regNumber:this.regNumber,
+          taxNumber:this.taxNumber,
+          contactNumber: this.contactNumber,
+          companyEmail: this.companyEmail,
+          street: this.street,
+          companySuburb: this.companySuburb,
+          companyCity: this.companyCity,
+          companyProvince: this.companyProvince,
+          companyPostalCode: this.companyPostalCode,
+          bankName: this.bankName,
+          accountType: this.accountType,
+          holderName: this.holderName,
+          branch: this.branch,
+
+         }).then(()=>{
+           console.log('added')
+         })
+
+      }
+
+      }).catch(err=>{
+        console.log(err.message)
+      })
+
+    }
+
+    landingPage(){
+      this.router.navigate(['/landingpage'])
+    }
+      
+    
 
 }

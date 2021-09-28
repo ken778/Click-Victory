@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+      <div class="header">
+        <div>
+          <ion-icon (click)="landingPage()" name="chevron-back"></ion-icon>
+        </div>
+        <div>
+          <img src="../../assets/images/ArtboardLogo.png ">
+        </div>
+      </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="container">
+    <div class="input-container">
+      <div class="input-wrapper">
+        <ion-item lines="none">
+          <input size="100" class="inputCustom" type="text" placeholder="Email Address"  [(ngModel)]="email">
+        </ion-item>
+      </div>
+      <div style="margin-top: 10px;" class="input-wrapper">
+        <ion-item lines="none">
+          <input size="100" class="inputCustom" type="password" placeholder="Password" [(ngModel)]="password">
+        </ion-item>
+      </div>
+
+      <div class="input-wrapper">
+
+        <button (click)="login()">login</button>
+
+      </div>
+    </div>
+  
+  </div>
+</ion-content>

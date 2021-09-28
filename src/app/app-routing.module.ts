@@ -14,10 +14,14 @@ import { TrainingpaymentComponent } from './components/trainingpayment/trainingp
 import { ClientprofileComponent } from './components/clientprofile/clientprofile.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { LandingpageComponent } from './components/landingpage/landingpage.component';
+import { LoginComponent } from './components/login/login.component'
 import { HomePageModule } from './home/home.module';
 const routes: Routes = [ 
   {
     path: 'personaldetails', component:  PersonaldetailsComponent
+  },
+  {
+    path: 'login', component:  LoginComponent
   },
   {
     path: 'landingpage', component:  LandingpageComponent
@@ -67,7 +71,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'landingpage',
     pathMatch: 'full',
   },
 
@@ -83,7 +87,11 @@ const routes: Routes = [
   {
     path: 'form-stepper',
     loadChildren: () => import('./pages/form-stepper/form-stepper.module').then( m => m.FormStepperPageModule)
+  },  {
+    path: 'signin',
+    loadChildren: () => import('./pages/signin/signin.module').then( m => m.SigninPageModule)
   },
+
 
 
 

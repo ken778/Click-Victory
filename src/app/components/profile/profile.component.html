@@ -3,7 +3,7 @@
       <div class="header">
           <div>
               <a routerLink="/deliveriespage"></a>
-              <ion-icon name="chevron-back"></ion-icon>
+              <ion-icon (click)="logout()" name="log-out-outline"></ion-icon>
           </div>
           <div>
               <ion-title>
@@ -16,7 +16,7 @@
       </div>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content  *ngIf='details'>
   <div class="banner">
     
   </div>
@@ -24,7 +24,7 @@
     <div><ion-avatar><img src="../../../assets/images/profilepic.png" alt=""></ion-avatar></div>
     <div>
       <ion-text>
-          <p>36</p>
+          <p>45</p>
           <p>sold</p>
     </ion-text>
   </div>
@@ -36,7 +36,7 @@
     </div>
     <div>
       <ion-text>
-        <p>36</p>
+        <p>20</p>
         <p>reviews</p>
   </ion-text>
     </div>
@@ -45,7 +45,7 @@
   <div class="details">
     <ion-item lines="none">
       <ion-text> 
-        <h1>Phathutshedzo Nemaguvhuni</h1>
+        <h1>{{details.name}}</h1>
         <h4>Owner at Phatu Farms</h4>
       </ion-text>
     </ion-item>
@@ -76,13 +76,10 @@
     </div>
   </div>
   <div class="products">
-   <div><img src="../../../assets/images/pic6.jpg" alt=""></div>
-   <div><img src="../../../assets/images/pic6.jpg" alt=""></div>
-   <div><img src="../../../assets/images/pic6.jpg" alt=""></div>
-   <div><img src="../../../assets/images/pic6.jpg" alt=""></div>
-   <div><img src="../../../assets/images/pic6.jpg" alt=""></div>
-   <div><img src="../../../assets/images/pic6.jpg" alt=""></div>
-   <div><img src="../../../assets/images/pic6.jpg" alt=""></div>
+   <div *ngFor="let item of photo">
+    <img [src]="item.imgae">
+    </div>
+   
   </div>
 
 

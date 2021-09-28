@@ -1,8 +1,15 @@
 <ion-header>
   <ion-toolbar class="top-toolbar">
-      <ion-text>
-        <h3>register</h3>
-      </ion-text>
+    <div class="header">
+      <div>
+        <ion-icon (click)="landingPage()" name="chevron-back"></ion-icon>
+      </div>
+      <div>
+       <ion-text>
+         <h3>register</h3>
+       </ion-text>
+      </div>
+    </div>
   </ion-toolbar>
 </ion-header>
 
@@ -27,31 +34,27 @@
    
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="Name" name="name" #name="ngModel" ngModel
-              required>
+            <input size="100" class="inputCustom" type="text" [(ngModel)]="name" placeholder="Name" >
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="Surname" name="surname" #surname="ngModel"
-              ngModel required>
+            <input size="100" class="inputCustom" type="text"  [(ngModel)]="surname" placeholder="Surname" >
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="number" placeholder="ID Number" name="IDnumber"
-              #IDnumber="ngModel" ngModel required>
+            <input size="100" class="inputCustom" type="number"  [(ngModel)]="IDnumber" placeholder="ID Number">
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="email" placeholder="Email" name="email" #email="ngModel" ngModel
-              required>
+            <input size="100" class="inputCustom" type="email"  [(ngModel)]="email" placeholder="Email" >
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="password" name="Password" #password="ngModel" ngModel required>
+            <input size="100" class="inputCustom" type="password"  [(ngModel)]="password" placeholder="password" >
           </ion-item>
         </div>
         
@@ -79,38 +82,33 @@
 
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="Street name & Number" name="StreetName"
-              #StreetName="ngModel" ngModel required>
+            <input size="100" class="inputCustom" type="text"  [(ngModel)]="streetName" placeholder="Street name & Number" >
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="Suburb" name="suburb" #suburb="ngModel"
-              ngModel required>
+            <input size="100" class="inputCustom" type="text"  [(ngModel)]="suburb" placeholder="Suburb" >
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="City" name="city" #city="ngModel" ngModel
-              required>
+            <input size="100" class="inputCustom" type="text"  [(ngModel)]="city" placeholder="City" >
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="Province" name="province" #province="ngModel"
-              ngModel required>
+            <input size="100" class="inputCustom" type="text"  [(ngModel)]="province" placeholder="Province">
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="Postal Code" name="postalCode"
-              #postalCode="ngModel" ngModel required>
+            <input size="100" class="inputCustom" type="text"  [(ngModel)]="postalCode" placeholder="Postal Code" >
           </ion-item>
         </div>
 
         <div class="input-wrapper">
 
-          <button mat-button matStepperNext>Next</button>
+          <button   mat-button matStepperNext>Next</button>
 
         </div>
 
@@ -133,26 +131,22 @@
 
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="number" placeholder="Registration Number" name="regNumber"
-              #regNumber="ngModel" ngModel required>
+            <input size="100" class="inputCustom" type="number" placeholder="Registration Number"  [(ngModel)]="regNumber">
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="Tax Number" name="taxNumber"
-              #taxNumber="ngModel" ngModel required>
+            <input size="100" class="inputCustom" type="text" placeholder="Tax Number" [(ngModel)]="taxNumber">
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="Contact Number" name="contactNumber"
-              #contactNumber="ngModel" ngModel required>
+            <input size="100" class="inputCustom" type="text" placeholder="Contact Number" [(ngModel)]="contactNumber">
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="email" placeholder="Email Address" name="email" #companyemail="ngModel"
-              ngModel required>
+            <input size="100" class="inputCustom" type="email" placeholder="Email Address" [(ngModel)]="companyEmail">
           </ion-item>
         </div>
         <div class="input-wrapper">
@@ -178,32 +172,27 @@
 
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="Street name & Number" name="street"
-              #street="ngModel" ngModel required>
+            <input size="100" class="inputCustom" type="text" placeholder="Street name & Number" [(ngModel)]="street">
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="Suburb" name="companySuburb" #companySuburb="ngModel"
-              ngModel required>
+            <input size="100" class="inputCustom" type="text" placeholder="Suburb"  [(ngModel)]="companySuburb">
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="City" name="companyCity" #companyCity="ngModel" ngModel
-              required>
+            <input size="100" class="inputCustom" type="text" placeholder="City" [(ngModel)]="companyCity">
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="Province" name="companyProvince" #companyProvince="ngModel"
-              ngModel required>
+            <input size="100" class="inputCustom" type="text" placeholder="Province"  [(ngModel)]="companyProvince">
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="Postal Code" name="companyPostalCode"
-              #companyPostalCode="ngModel" ngModel required>
+            <input size="100" class="inputCustom" type="text" placeholder="Postal Code" [(ngModel)]="companyPostalCode">
           </ion-item>
         </div>
 
@@ -229,30 +218,26 @@
 
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="Bank Name" name="bankName"
-              #bankName="ngModel" ngModel required>
+            <input size="100" class="inputCustom" type="text" placeholder="Bank Name" [(ngModel)]="bankName">
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="Account Type" name="accountType"
-              #accountType="ngModel" ngModel required>
+            <input size="100" class="inputCustom" type="text" placeholder="Account Type"  [(ngModel)]="accountType">
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="Account Holder Name" name="holderName"
-              #holderName="ngModel" ngModel required>
+            <input size="100" class="inputCustom" type="text" placeholder="Account Holder Name" [(ngModel)]="holderName">
           </ion-item>
         </div>
         <div class="input-wrapper">
           <ion-item lines="none">
-            <input size="100" class="inputCustom" type="text" placeholder="Branch Name" name="branch" #branch="ngModel"
-              ngModel required>
+            <input size="100" class="inputCustom" type="text" placeholder="Branch Name" [(ngModel)]="branch">
           </ion-item>
         </div>
         <div class="input-wrapper">
-          <button type="submit" mat-button matStepperNext>register</button>
+          <button (click)=" register()" type="submit" mat-button matStepperNext>register</button>
         </div>
 
       </div>

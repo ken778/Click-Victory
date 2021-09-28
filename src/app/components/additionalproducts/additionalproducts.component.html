@@ -1,14 +1,22 @@
+
 <ion-header>
-    <ion-toolbar class="header-cont">
-        <div class="cont ">
-            <a routerLink="/addproducts">
-                <ion-icon (click)="backToProductsPage()" name="chevron-back-outline"></ion-icon>
-            </a>
-            <p>Add Products</p>
-            <img src="../../assets/images/logo.png ">
+    <ion-toolbar>
+        <div class="header">
+            <div>
+                <a routerLink="/deliveriespage"></a>
+                <ion-icon name="chevron-back"></ion-icon>
+            </div>
+            <div>
+                <ion-title>
+                  Product 
+                </ion-title>
+            </div>
+            <div>
+              <img src="../../assets/images/logo.png ">
+            </div>
         </div>
     </ion-toolbar>
-</ion-header>
+  </ion-header>
 
 <ion-content *ngIf="product">
      <div class="topDetails">
@@ -20,7 +28,7 @@
          <div>
              <ion-text>
                  <h5>R{{product.price}}</h5>
-                 <h5>R9854</h5>
+                 
              </ion-text>
          </div>
      </div>
