@@ -25,6 +25,10 @@
         <div class="product-images">
             <div *ngFor="let item of image">
                 <img  [routerLink]="['/', 'additionalproducts', item.payload.doc.id]" routerLinkActive="router-link-active" [src]="item.payload.doc.data().imgae"/> 
+
+                <ion-text>
+                    <p>R{{item.payload.doc.data().price}}</p>
+                </ion-text>
             </div>
         </div>
 

@@ -67,8 +67,9 @@ ion-text {
 
 ion-button {
     --border-radius: 25px;
-    text-align: center;
-    margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     color: #575F6B;
     width: 194px;
 }

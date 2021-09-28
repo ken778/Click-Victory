@@ -27,16 +27,18 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { ReactiveFormsModule} from '@angular/forms'; 
 import {AddproductsComponent} from '../app/components/addproducts/addproducts.component';
 import {ProductspageComponent} from '../app/components/productspage/productspage.component';
+import {AdditionalproductsComponent} from '../app/components/additionalproducts/additionalproducts.component';
 import {FundspageComponent} from './components/fundspage/fundspage.component';
+
 import { FundsOutComponent } from './components/funds-out/funds-out.component';
 import { RegistrationViewModule } from './modules/registration-view-module';
 
-
-
+ 
+ 
 
 @NgModule({
   
-  declarations: [AppComponent,LandingPagePipe,AddproductsComponent,ProductspageComponent, FundspageComponent, FundsOutComponent],
+  declarations: [AppComponent,AdditionalproductsComponent,LandingPagePipe,AddproductsComponent,ProductspageComponent, FundspageComponent, FundsOutComponent],
   entryComponents: [],
   imports: [
     BrowserModule,

@@ -39,10 +39,10 @@ export class FormStepperPage implements OnInit {
   }
 
   //sign up
-  personalDetails(detailsData: NgForm) {
+  personalDetails(detailsData: NgForm) 
     {
       //personal details
-     this.name=  this.registerViewModule.name = detailsData.value.name;
+    
      
       this.registerViewModule.surname = detailsData.value.surname;
       this.registerViewModule.idNumber = detailsData.value.IDnumber;
@@ -72,76 +72,78 @@ export class FormStepperPage implements OnInit {
       this.registerViewModule.accountHolder= detailsData.value.holderName;
       this.registerViewModule.accountType = detailsData.value.accountType;
 
-      this.registerViewModule;
+      
+
+      console.log('button pushed');
 
 
-      this.afauth.createUserWithEmailAndPassword(detailsData.value.email, String(detailsData.value.password)).then((data) => {
-        localStorage.setItem('key', data.user.uid);
-        data.user.sendEmailVerification()
-        if (data.user.sendEmailVerification()) {
-          this._afa.collection('personalDetails').doc(data.user.uid).set({
+  //     this.afauth.createUserWithEmailAndPassword(detailsData.value.email, String(detailsData.value.password)).then((data) => {
+  //       localStorage.setItem('key', data.user.uid);
+  //       data.user.sendEmailVerification()
+  //       if (data.user.sendEmailVerification()) {
+  //         this._afa.collection('personalDetails').doc(data.user.uid).set({
           
 
-
+  
          
-            name: detailsData.value.name,
-            surname: detailsData.value.surname,
-            idNo: detailsData.value.IDnumber,
-            email: detailsData.value.email,
+  //           // name: detailsData.value.name,
+  //           // surname: detailsData.value.surname,
+  //           // idNo: detailsData.value.IDnumber,
+  //           // email: detailsData.value.email,
             
 
-            //physical address details
-            StreetName: detailsData.value.StreetName,
-            suburb: detailsData.value.suburb,
-            city: detailsData.value.city,
-            postalCode: detailsData.value.postalCode,
+  //           // //physical address details
+  //           // StreetName: detailsData.value.StreetName,
+  //           // suburb: detailsData.value.suburb,
+  //           // city: detailsData.value.city,
+  //           // postalCode: detailsData.value.postalCode,
 
-            //company details
-            regNumber: detailsData.value.regNumber,
-            taxNumber: detailsData.value.taxNumber,
-            contactNumber: detailsData.value.contactNumber,
-            companyemail: detailsData.value.companyemail,
+  //           // //company details
+  //           // regNumber: detailsData.value.regNumber,
+  //           // taxNumber: detailsData.value.taxNumber,
+  //           // contactNumber: detailsData.value.contactNumber,
+  //           // companyemail: detailsData.value.companyemail,
 
-            //company address
-            street: detailsData.value.street,
-            companysuburb: detailsData.value.companysuburb,
-            companyCity: detailsData.value.companyCity,
-            companyProvince: detailsData.value.companyProvince,
-            companyPostalCode: detailsData.value.companyPostalCode,
+  //           // //company address
+  //           // street: detailsData.value.street,
+  //           // companysuburb: detailsData.value.companysuburb,
+  //           // companyCity: detailsData.value.companyCity,
+  //           // companyProvince: detailsData.value.companyProvince,
+  //           // companyPostalCode: detailsData.value.companyPostalCode,
 
-            //banking details
-            bankName: detailsData.value.bankName,
-            accountType: detailsData.value.accountType,
-            holderName: detailsData.value.holderName,
-            branch: detailsData.value.branch,
+  //           // //banking details
+  //           // bankName: detailsData.value.bankName,
+  //           // accountType: detailsData.value.accountType,
+  //           // holderName: detailsData.value.holderName,
+  //           // branch: detailsData.value.branch,
 
-          }).then((y) => {
-            console.log('successfully registered')
-          })
+  //         }).then((y) => {
+  //           console.log('successfully registered')
+  //         })
 
-        } else {
+  //       } else {
 
-        }
+  //       }
 
-      }).catch((error) => {
+  //     }).catch((error) => {
 
-        this.toast(error.message, 'danger');
-      })
+  //       this.toast(error.message, 'danger');
+  //     })
+  //   }
+  // }//end of register
+
+
+  // async toast(message, status) {
+  //   const toast = await this.toastr.create({
+  //     message: message,
+  //     position: 'top',
+  //     color: status,
+  //     duration: 2000
+  //   })
+  //   toast.present()
+  // }//end of toast
+
+
     }
-  }//end of register
-
-
-  async toast(message, status) {
-    const toast = await this.toastr.create({
-      message: message,
-      position: 'top',
-      color: status,
-      duration: 2000
-    })
-    toast.present()
-  }//end of toast
-
-
- 
 
 }

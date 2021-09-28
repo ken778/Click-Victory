@@ -31,6 +31,11 @@
   //
   ion-header {
     width: 100%;
+    ion-text{
+        h3{
+            text-align: center;
+        }
+    }
 }
 
 ion-toolbar.header-cont {

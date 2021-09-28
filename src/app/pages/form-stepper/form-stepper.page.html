@@ -1,13 +1,16 @@
 <ion-header>
   <ion-toolbar class="top-toolbar">
-
+      <ion-text>
+        <h3>register</h3>
+      </ion-text>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <form (ngSubmit)="personalDetails(detailsData)" #detailsData="ngForm">
+
   <mat-horizontal-stepper class="heard">
-    
+     <!-- <form (ngSubmit)="personalDetails(detailsData)" #detailsData="ngForm"> -->
+
     <mat-step>
       <div class="back-button-and-name">
         <div>
@@ -20,7 +23,8 @@
 
       <div>
 
-
+       
+   
         <div class="input-wrapper">
           <ion-item lines="none">
             <input size="100" class="inputCustom" type="text" placeholder="Name" name="name" #name="ngModel" ngModel
@@ -110,9 +114,11 @@
 
         </div>
 
-
+   
       </div>
+   
     </mat-step>
+ 
     <mat-step>
 
       <div class="back-button-and-name">
@@ -251,14 +257,14 @@
 
       </div>
     </mat-step>
- 
+
 
   </mat-horizontal-stepper>
-</form>
+
 
 </ion-content>
 <ion-footer class="footer">
   <ion-toolbar class="ftr">
-    <p>Saved 4 minutes ago</p>
+   
   </ion-toolbar>
 </ion-footer>

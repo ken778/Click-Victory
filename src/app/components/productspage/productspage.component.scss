@@ -176,5 +176,11 @@ div.cont img {
        
     }
     .product-images > div{
-        border: 2px solid gray;
+        border: 2px solid rgb(203, 211, 219);
+    }
+    ion-text{
+        p{
+            margin-left: 10px;
+            font-weight: 500;
+        }
     }

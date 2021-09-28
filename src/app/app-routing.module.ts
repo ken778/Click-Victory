@@ -13,11 +13,16 @@ import { TrainingpageComponent } from './components/trainingpage/trainingpage.co
 import { TrainingpaymentComponent } from './components/trainingpayment/trainingpayment.component';
 import { ClientprofileComponent } from './components/clientprofile/clientprofile.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { LandingpageComponent } from './components/landingpage/landingpage.component';
 import { HomePageModule } from './home/home.module';
 const routes: Routes = [ 
   {
     path: 'personaldetails', component:  PersonaldetailsComponent
   },
+  {
+    path: 'landingpage', component:  LandingpageComponent
+  },
+
   {
     path: 'personaldetails', component:  PersonaldetailsComponent
   },

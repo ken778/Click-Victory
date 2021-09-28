@@ -10,26 +10,26 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="product">
      <div class="topDetails">
          <div>
              <ion-card class="productPic">
-                 <img src="../../../assets/images/pic2.jpg" alt="">
+                 <img src="{{product.imgae}}" alt="">
              </ion-card>
          </div>
          <div>
              <ion-text>
-                 <h5>R9854</h5>
+                 <h5>R{{product.price}}</h5>
                  <h5>R9854</h5>
              </ion-text>
          </div>
      </div>
      <div class="name">
-        <h4>Bananas</h4>
+        <h4>{{product.productName}}</h4>
      </div>
      <div class="description">
          <ion-text>
-             <p>Lorem ipsumFugit esse molestiminus aspernatur nostrum vitae voluptatibus voluptate error. Sequi coibus,molestiminus aspernatur nostrum vitae voluptatibus voluptate error. Sequi coibus,</p>
+             <p>{{product.description}}</p>
          </ion-text>
      </div>
     
