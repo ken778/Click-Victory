@@ -166,3 +166,10 @@ div.image-ftr .image {
 div.image a:active {
     color: green;
 }
+@media (min-width: 320px) and (max-width: 375px) {
+    .deliveryDiv{
+        h3{
+            font-size: smaller;
+        }
+    }
+}

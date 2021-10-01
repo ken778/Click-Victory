@@ -27,10 +27,18 @@
                 <img  [routerLink]="['/', 'additionalproducts', item.payload.doc.id]" routerLinkActive="router-link-active" [src]="item.payload.doc.data().imgae"/> 
 
                 <ion-text>
-                    <p>R{{item.payload.doc.data().price}}</p>
+                    <p>R {{item.payload.doc.data().price}}</p>
                 </ion-text>
             </div>
+           
         </div>
+        <div class="empty" *ngIf="count < 1">
+            <ion-text>
+                <h1>
+                    No products yet!
+                </h1>
+            </ion-text>
+        </div> 
 
         <ion-fab vertical="bottom" horizontal="center" slot="fixed">
             <ion-fab-button>
@@ -43,23 +51,5 @@
 
 </ion-content>
 
-<!-- <ion-footer>
-    <ion-toolbar class="ftr">
-        <div class="image-ftr">
-            <div class="image">
-                <a routerLink="/productspage"> <img src="../../assets/images/Group 114.png"> </a>
 
-            </div>
-            <div class="image">
-                <a routerLink="/clientprofile"> <img src="../../assets/images/Group 113@2x.png"> </a>
-            </div>
-            <div class="image">
-                <a routerLink="/trainingpage"> <img src="../../assets/images/Group 112@2x.png"> </a>
-            </div>
-            <div class="image">
-                <a routerLink="/deliveriespage"> <img src="../../assets/images/Group 111@2x.png"> </a>
-            </div>
-        </div>
-    </ion-toolbar>
-</ion-footer> -->
 

@@ -207,7 +207,8 @@ export class FormStepperPage implements OnInit {
           branch: this.branch,
 
          }).then(()=>{
-           console.log('added')
+          this.toast('Please varify your email', 'success');
+          this.router.navigate(['/signin'])
          })
 
       }
@@ -217,6 +218,16 @@ export class FormStepperPage implements OnInit {
       })
 
     }
+    async toast(message, status) {
+      const toast = await this.toastr.create({
+        message: message,
+        position: 'top',
+        color: status,
+        duration: 2000,
+      });
+  
+      toast.present();
+    } // end of toast
 
     landingPage(){
       this.router.navigate(['/landingpage'])

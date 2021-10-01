@@ -1,5 +1,5 @@
 {
-  "name": "taskSchedule",
+  "name": "click victory",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -24,7 +24,7 @@
     "@angular/platform-browser-dynamic": "~11.2.0",
     "@angular/router": "~11.2.0",
     "@angular/service-worker": "~11.2.0",
-    "@capacitor/android": "^2.4.7",
+    "@capacitor/android": "^3.2.3",
     "@capacitor/camera": "^1.1.0",
     "@capacitor/core": "^3.2.3",
     "@ionic/angular": "^5.5.2",

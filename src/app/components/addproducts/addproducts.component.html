@@ -32,9 +32,9 @@
                 <ion-input type="text" placeholder="Quality"  name="quality"
                 #quality="ngModel" ngModel required></ion-input>
             </ion-card>
-            <ion-icon (click)="pickImageFromGallery()" class="camera" name="camera-sharp"></ion-icon>
+            
             <ion-card class="prod" >
-               
+                <ion-icon *ngIf="!base64" (click)="pickImageFromGallery()" class="camera" name="camera-sharp"></ion-icon>
                 <img [src]="base64"/> 
             </ion-card>
         </div>

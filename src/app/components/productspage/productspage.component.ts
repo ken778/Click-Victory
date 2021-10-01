@@ -8,7 +8,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class ProductspageComponent implements OnInit {
 
-   
+  count: any;
   image:any;
   constructor(private afs: AngularFirestore) { }
 
@@ -17,6 +17,8 @@ export class ProductspageComponent implements OnInit {
     .collection('products').snapshotChanges().subscribe((dat)=>{
       console.log(dat)
       this.image = dat;
+      this.count = dat.length;
+      console.log(this.count)
     })
   }
 

@@ -595,3 +595,8 @@ ion-toolbar.ftr {
   padding-left: 10px;
  
 }
+@media (min-width: 320px) and (max-width: 375px) {
+    ion-footer{
+        display: none !important;
+    }
+}

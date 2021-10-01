@@ -14,6 +14,7 @@ export class ProfileComponent implements OnInit {
   //variables to display
   details: any;
   photo : any;
+  count : any;
   constructor(private auth : AuthService, private afs : AngularFirestore) { }
 
   ngOnInit() {
@@ -34,6 +35,8 @@ export class ProfileComponent implements OnInit {
       this.afs.collection('products', ref=> ref.where('userID','==',res.uid)).valueChanges().subscribe(dat=>{
           console.log(dat)
           this.photo = dat;
+          this.count = dat.length;
+          console.log(this.count)
       })
        
       }) 
@@ -43,6 +46,10 @@ export class ProfileComponent implements OnInit {
 
 
     
+  }
+
+  logout(){
+    this.auth.logout();
   }
 
 }

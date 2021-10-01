@@ -57,7 +57,8 @@ export class AddproductsComponent implements OnInit {
         .collection('products')
         .add(product)
         .then(() => {
-          this.toast('task added', 'success');
+          this.toast('product added', 'success');
+          
     
         })
         .catch((err) => {
