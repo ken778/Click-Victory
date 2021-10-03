@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fundspage',
@@ -11,7 +12,7 @@ export class FundspageComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
 
   changeValue(_value) {
@@ -25,6 +26,10 @@ export class FundspageComponent implements OnInit {
   ngOnInit() {
     this.value = 'incoming'
  
+  }
+
+  deliveries(){
+      this.router.navigate(['/home/deliveriespage'])
   }
 
 }

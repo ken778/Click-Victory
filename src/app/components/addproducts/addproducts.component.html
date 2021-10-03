@@ -19,63 +19,52 @@
   </ion-header>
 
 <ion-content>
-    <form (ngSubmit)="addProduct(productData)" #productData="ngForm">
-    <ion-item>
-        <div class="card-content">
-         
-            <ion-card class="prod-field">
-                <ion-input class="input" type="text" placeholder="Price"  name="price"
-                #price="ngModel" ngModel required></ion-input>
-            </ion-card>
-
-            <ion-card class="prod-field">
-                <ion-input type="text" placeholder="Quality"  name="quality"
-                #quality="ngModel" ngModel required></ion-input>
-            </ion-card>
-            
-            <ion-card class="prod" >
-                <ion-icon *ngIf="!base64" (click)="pickImageFromGallery()" class="camera" name="camera-sharp"></ion-icon>
-                <img [src]="base64"/> 
+  <form (ngSubmit)="addProduct(productData)" #productData="ngForm">
+    <div class="topDetails">
+        <div>
+            <ion-card class="productPic">
+              <ion-icon *ngIf="!base64" (click)="pickImageFromGallery()" class="camera" name="camera-sharp"></ion-icon>
+              <img *ngIf="base64" [src]="base64"/> 
             </ion-card>
         </div>
-    </ion-item>
-
-    <ion-card class="prod-details">
-        <ion-input type="text" placeholder="Product Name" name="productName"
-        #productName="ngModel" ngModel required></ion-input>
-    </ion-card>
-
-    <ion-card class="prod-details">
-        <ion-input type="text" placeholder="Crate, Units or Tonnes"  name="units"
-        #units="ngModel" ngModel required></ion-input>
-    </ion-card>
-
-    <ion-card class="prod-descrip">
-        <ion-input type="text" placeholder="Description" name="description"
-        #description="ngModel" ngModel required></ion-input>
-    </ion-card>
-
-    <ion-button color="light " type="submit">
-       SUBMIT LISTING
-    </ion-button>
-  </form>
+        <div>
+            <div class="price-quantity">
+                <div class="input-wrapper">
+                    <ion-item lines="none">
+                      <input size="100" class="inputCustom" type="text" placeholder="Price" name="price"
+                      #price="ngModel" ngModel required>
+                    </ion-item>
+                  </div>
+                  <div style="margin-top: 10px;" class="input-wrapper">
+                    <ion-item lines="none">
+                      <input size="100" class="inputCustom" type="text" placeholder="Quantity" name="quality"
+                      #quality="ngModel" ngModel required>
+                    </ion-item>
+                  </div>
+            </div>
+           
+        </div>
+    </div>
+    <div class="input-wrapper">
+        <ion-item lines="none">
+          <input size="100" class="inputCustom" type="text" placeholder="Product Name" name="productName"
+          #productName="ngModel" ngModel required>
+        </ion-item>
+      </div>
+      <div style="margin-top: 10px;" class="input-wrapper">
+        <ion-item lines="none">
+          <input size="100" class="inputCustom" type="text" placeholder="Crate, Units or Tonnes" name="units"
+          #units="ngModel" ngModel required>
+        </ion-item>
+      </div>
+      <div style="margin-top: 10px;" class="input-wrapper">
+        <ion-item lines="none">
+          <textarea style="height: 150px;" size="100" class="inputCustom" type="text" placeholder="Description" name="description"
+          #description="ngModel" ngModel required ></textarea>
+        </ion-item>
+      </div>
+      <ion-button color="light " type="submit">
+        SUBMIT LISTING
+     </ion-button>
+    </form>
 </ion-content>
-
-<!-- <ion-footer>
-    <ion-toolbar class="ftr">
-        <div class="image-ftr">
-            <div class="image">
-                <a routerLink="/productspage"> <img src="../../assets/images/Group 114.png"></a>
-            </div>
-            <div class="image">
-                <a routerLink="/clientprofile"> <img src="../../assets/images/Group 113@2x.png"></a>
-            </div>
-            <div class="image">
-                <a routerLink="/trainingpage"> <img src="../../assets/images/Group 112@2x.png"></a>
-            </div>
-            <div class="image">
-                <a routerLink="/deliveriespage"> <img src="../../assets/images/Group 111@2x.png"></a>
-            </div>
-        </div>
-    </ion-toolbar>
-</ion-footer> -->

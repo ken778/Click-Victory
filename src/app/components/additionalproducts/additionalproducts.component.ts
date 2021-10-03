@@ -26,7 +26,7 @@ export class AdditionalproductsComponent implements OnInit {
   }
 
   back(){
-      this.router.navigate(['/productspage'])
+      this.router.navigate(['/home/productspage'])
   }
   backToProductsPage(){
     this.back();

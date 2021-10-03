@@ -30,8 +30,8 @@ ion-toolbar {
 .header div:nth-child(3) {
     float: right;
     text-align: right;
-    img {
-        opacity: 50%;
+    ion-icon {
+        color: rgb(150, 207, 65);
     }
 }
 

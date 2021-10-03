@@ -27,7 +27,8 @@
          </div>
          <div>
              <ion-text>
-                 <h5>R{{product.price}}</h5>
+                 <h5>R {{product.price}}</h5>
+                 <h5>{{product.quality}} crates</h5>
                  
              </ion-text>
          </div>
@@ -44,9 +45,7 @@
    
 
     
-    <ion-button color="light" class="editButton">
-        <a routerLink="/productspage">EDIT</a>
-    </ion-button>
+  
 
     <ion-button color="light" (click)="back()">
         CLOSE

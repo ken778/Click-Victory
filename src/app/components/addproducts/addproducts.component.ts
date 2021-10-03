@@ -63,6 +63,7 @@ export class AddproductsComponent implements OnInit {
         })
         .catch((err) => {
           this.toast('something is wrong', 'danger');
+          console.log(err.message)
         });
     });
   }

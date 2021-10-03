@@ -38,108 +38,80 @@ ion-toolbar {
         margin-top:5px;
     }
 }
-.cont {
-    padding: 0;
-    margin-top: 8px;
-    flex-direction: row;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.cont a {
-    margin-right: 45px;
-}
-
-.cont img {
-    width: 33.77px;
-    height: 37.81px;
-    margin-left: 110px;
-}
-
-.cont p {
-    font-size: 16px;
-}
-
-ion-content {
-    width: 100%;
-    padding: 0;
-    margin-top: 0;
-}
-
-ion-item {
-    width: 100%;
-    margin: 10px auto;
-}
-
-div.card-content {
-    margin-top: 5px;
-    padding: 0;
-    margin-right: 10px auto;
-}
-
-ion-card.prod {
-    width: 144px;
-    height: 132px;
-    padding: 6px;
-    border-radius: 15px;
-    background-color: white;
-    box-shadow: 4px 5px 5px 5px rgba(233, 233, 233, 0.6) inset;
+.topDetails{
+    width:100%;
     float: left;
-    margin-top: -143px;
-    margin-left: -4px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
 }
-
-ion-card.prod p {
+.topDetails > div{
     text-align: center;
-    margin: 5px;
 }
-
-ion-card.prod-field {
-    width: 170px;
-    height: 44px;
-    border-radius: 25px;
-    position: relative;
-    left: 145px;
-    top: 3px;
-    padding-left: 10px;
-    box-shadow: 5px 5px 5px rgba(233, 233, 233) inset; 
-
+.topDetails div:nth-child(1){
+   
 }
-ion-input:focus{
-    background: transparent !important;
-    outline: none !important;
+.topDetails div:nth-child(2){
+    //background-color: rgb(143, 79, 79);
+    ion-text{
+        h5{
+            margin-top:35px;
+             text-align: left;
+             font-size: 18px; 
+             font-weight: 500;
+    
+        }  
+       
+    }
+    ion-text h5:nth-child(1){
+        color: rgb(135, 199, 39);
+    }
+}
+ .productPic{
+     width: 150px;
+    height: 150px;
+    img{
+        width: 140px;
+        height: 140px;
+        margin-top: 20px;
+        
+    }
+ }
+.camera{
+  //margin-left: -7rem;
+  font-size: 50px;
+   margin-top: 50px;
+  color:  rgb(150, 207, 65);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.inputCustom{
+    box-shadow: none !important;
     border: none !important;
-}
-.prod-field ion-input {
-    margin-bottom: 6px;
-    margin-left: 10px;
-}
-
-ion-card.prod-details {
     border-radius: 25px;
-    margin: 25px auto;
-    padding-left: 22px;
-    width: 337px;
-    height: 48px;
-    box-shadow: 5px 5px 5px rgb(233, 233, 233) inset;
+   // width: 100% !important;
+    //width: 270px !important;
+    width:100%;
+ 
+    text-align: left !important;
+    box-shadow: 5px 5px 5px rgba(233, 233, 233) inset !important;
 }
-
-ion-input.prod-details {
-    border-radius: 25px;
-    margin: 5px;
-    padding: 0;
-    width: 100%;
+.input-wrapper{
+    //border: 1px solid black;
+    border-radius: 45px;
+   // box-shadow: 5px 5px 5px rgba(233, 233, 233) inset;
+    width: 100% !important;
+    float: left;
+    padding: 1%;
+ 
 }
-
-ion-card.prod-descrip {
-    width: 337px;
-    height: 170px;
-    border-radius: 25px;
-    margin: 25px auto;
-    padding-left: 22px;
-    box-shadow: 5px 5px 5px 5px rgba(233, 233, 233, 0.8) inset;
+.price-quantity{
+    margin-top: 35px;
 }
-
+textarea{
+    outline: none !important;
+  padding: 4% !important;
+}
 ion-button {
     align-items: center;
     --border-radius: 25px;
@@ -153,50 +125,5 @@ ion-button a {
     text-align: center;
     text-decoration: none;
     color: #575F6B;
-}
-
-ion-footer {
-    width: 100%;
-    height: 118px;
-    --background: #EFF9F3;
-}
-
-ion-toolbar.ftr {
-    --background: #EFF9F3;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    ;
-}
-
-ion-toolbar.ftr img {
-    width: 50px;
-}
-
-div.image-ftr {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 10px;
-    align-items: center;
-}
-
-div.image-ftr .image {
-    justify-content: center;
-}
-.input{
-    border: none;
-    background: transparent;
-    outline: none !important;
-    
-}
-.camera{
-  //margin-left: -7rem;
-  font-size: 50px;
-   margin-top: 30px;
-  color:  rgb(150, 207, 65);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    box-shadow: 4px 5px 5px 5px rgba(233, 233, 233, 0.6)
 }
