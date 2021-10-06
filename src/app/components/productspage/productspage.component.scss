@@ -174,12 +174,15 @@ div.cont img {
         float: left;
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        grid-gap: 1px;
+        grid-gap: 1px; 
+      
+        
        
     }
     .product-images > div{
         border: 2px solid rgb(203, 211, 219);
-    
+       
+     
     }
     ion-text{
         text-align: center;
@@ -200,4 +203,15 @@ div.cont img {
                 margin-top: 50px;
             }
         }
+    }
+    .price{
+        width: 100%;
+        float: left;
+       background-color:rgb(237, 248, 246);
+     bottom: 0 !important;
+       position: relative;
+    }
+    .image{
+        width: 100%;
+        float: left;
     }
