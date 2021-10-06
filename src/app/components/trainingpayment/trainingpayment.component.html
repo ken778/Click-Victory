@@ -3,7 +3,7 @@
         <div class="header">
             <div>
                 <a routerLink="/trainingpage"></a>
-                <ion-icon name="chevron-back"></ion-icon>
+                <ion-icon name="chevron-back" (click)="trainingpage()"></ion-icon>
             </div>
             <div>
                 <ion-title>
@@ -26,36 +26,46 @@
         <img src="../../assets/images/bankcard.png">
     </div>
 
-    <div class="text-field">
-        <ion-card class="input">
-            <ion-input type="text" placeholder="Account Holder Name">
-            </ion-input>
-        </ion-card>
-
-        <ion-card class="input">
-            <ion-input type="text" placeholder="Account Number ">
-            </ion-input>
-        </ion-card>
-        <div class="input-field">
-            <ion-card>
-                <ion-input type="number" placeholder="Expiry Date">
-                </ion-input>
-            </ion-card>
-
-            <ion-card>
-                <ion-input type="number" placeholder="CVV">
-                </ion-input>
-            </ion-card>
+   
+        <div class="input-container">
+            <div class="input-wrapper">
+                <ion-item lines="none">
+                    <input size="100" class="inputCustom" type="text" placeholder="Account Holder Name">
+                </ion-item>
+            </div>
+            <div style="margin-top: 10px;" class="input-wrapper">
+                <ion-item lines="none">
+                    <input size="100" class="inputCustom" type="number" placeholder="Account Number" >
+                </ion-item>
+            </div>
+            <div class="grid">
+                <div style="margin-top: 10px;" class="input-wrapper">
+                    <ion-item lines="none">
+                        <input size="100" class="inputCustom" type="text" placeholder="Expiry Date">
+                    </ion-item>
+                </div>
+                <div class="input-wrapper">
+                    <ion-item lines="none">
+                        <input size="100" class="inputCustom" type="text" placeholder="CCV">
+                    </ion-item>
+                </div>
+            </div>
+        
+            <button   (click)="OpenConfirmDialogue()">NEXT</button>
+    
         </div>
-    </div>
+        <div >
+        
+           
+        </div>
+        
+  
 
-    <ion-button (click)="OpenConfirmDialogue()" color="light ">
-        <!--<a href="/securitydetails"> NEXT</a>-->NEXT
-    </ion-button>
+ 
 
 </ion-content>
 
-<ion-footer>
+<!-- <ion-footer>
     <ion-toolbar class="ftr">
         <div class="image-ftr">
             <div class="image">
@@ -73,4 +83,4 @@
             </div>
         </div>
     </ion-toolbar>
-</ion-footer>
+</ion-footer> -->

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -9,7 +10,7 @@ import { AlertController } from '@ionic/angular';
 export class TrainingpageComponent implements OnInit {
   status:string="";
 
-  constructor(private alert: AlertController) { }
+  constructor(private alert: AlertController,private router: Router) { }
 
   ngOnInit() {}
 
@@ -36,5 +37,9 @@ export class TrainingpageComponent implements OnInit {
       confirmElement.present();
     })
   }
+
+  trainingpayment(){
+    this.router.navigate(['/trainingpayment'])
+}
 
 }
